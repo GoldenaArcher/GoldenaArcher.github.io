@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="I have set up io site for GitHub for a while, have not really play with the Git page anyway. However, since I started to study more and more, I feel like to have some place supports Markdown so that I">
+<meta name="keywords" content="GitHub,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Build GitHub Page with Hexo">
+<meta property="og:url" content="https://goldenaarcher.github.io/2019/06/07/Build-GitHub-Page-with-Hexo/index.html">
+<meta property="og:site_name" content="GoldenaArcher&#39;s Note">
+<meta property="og:description" content="I have set up io site for GitHub for a while, have not really play with the Git page anyway. However, since I started to study more and more, I feel like to have some place supports Markdown so that I">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-06-09T06:40:31.542Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Build GitHub Page with Hexo">
+<meta name="twitter:description" content="I have set up io site for GitHub for a while, have not really play with the Git page anyway. However, since I started to study more and more, I feel like to have some place supports Markdown so that I">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://goldenaarcher.github.io/2019/06/07/Build-GitHub-Page-with-Hexo/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Build GitHub Page with Hexo | GoldenaArcher's Note</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GoldenaArcher's Note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://goldenaarcher.github.io/2019/06/07/Build-GitHub-Page-with-Hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GoldenaArcher">
+      <meta itemprop="description" content="GoldenaArcher's personal blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GoldenaArcher's Note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Build GitHub Page with Hexo
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-07 00:16:39" itemprop="dateCreated datePublished" datetime="2019-06-07T00:16:39+08:00">2019-06-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-09 14:40:31" itemprop="dateModified" datetime="2019-06-09T14:40:31+08:00">2019-06-09</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>I have set up io site for GitHub for a while, have not really play with the Git page anyway. However, since I started to study more and more, I feel like to have some place supports Markdown so that I can organize my notes is important. Eventually, my previously set Git page came to my mind.</p>
+<p>Hence, I spent some time to set it up on my local machine, and decided to write it down in case I need to use it in the future. The original template is not bad, but limited in functions, so I changed to <a href="https://theme-next.org/" target="_blank" rel="noopener">NexT</a>.</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h1><p>I used <strong>Windows</strong>!</p>
+<p>The <a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">documentation of Hexo</a> has stated pretty clear that the minimum requirements for installing Hexo, which are:</p>
+<blockquote>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Should be at least nodejs 6.9)</li>
+<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+</ul>
+</blockquote>
+<p>NodeJs is very easy to install. Just go to the <a href="http://nodejs.org/" target="_blank" rel="noopener">official website</a>, download the <code>.msi</code> file of the latest stable version.</p>
+<p>Installing git is also very easy on the Windows system. Also going to the <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">official website</a>, and download the latest stable version based on the system of the pc. </p>
+<p>By following all of the steps, the environment should look something like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># the environment of my pc</span><br><span class="line">$ node -v</span><br><span class="line">v8.12.0</span><br><span class="line">$ git --version</span><br><span class="line">git version 2.15.0.windows.1</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="Install-and-Initialize-Hexo"><a href="#Install-and-Initialize-Hexo" class="headerlink" title="Install and Initialize Hexo"></a>Install and Initialize Hexo</h1><h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><p>Following the instructions, the <a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">documentation</a> also states that:</p>
+<blockquote>
+<p>If your computer already has these, congratulations! Just install Hexo with npm:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; $ npm install -g hexo-cli</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>After that, npm will automatically download the required dependencies of Hexo. After downloading all of the files, Hexo is almost ready to use</p>
+<hr>
+<h2 id="Initialize-Hexo-and-Testrun"><a href="#Initialize-Hexo-and-Testrun" class="headerlink" title="Initialize Hexo and Testrun"></a>Initialize Hexo and Testrun</h2><p>Change to the desired directory/location where the blog is going to be set up, then, just simply following these steps:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># assume the directory&apos;s name is blog</span><br><span class="line">hexo init blog</span><br><span class="line">$ cd blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo g # or hexo generate</span><br><span class="line">$ hexo s # or hexo server, the hexo server will run on localhost:4000</span><br></pre></td></tr></table></figure>
+
+<p>At this point, Hexo is ready on the local machine.</p>
+<hr>
+<h1 id="Config-and-Deploy-Hexo"><a href="#Config-and-Deploy-Hexo" class="headerlink" title="Config and Deploy Hexo"></a>Config and Deploy Hexo</h1><h2 id="Config-Info-for-Site"><a href="#Config-Info-for-Site" class="headerlink" title="Config Info for Site"></a>Config Info for Site</h2><p>All the configurations need to be separated by space!</p>
+<p>Follow the <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="noopener">Configuration</a>, add the title, description, and other variables for site. I changed settings in <code>_config.yml</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: GoldenaArcher&apos;s Note</span><br><span class="line">subtitle:</span><br><span class="line">description: GoldenaArcher&apos;s personal blog</span><br><span class="line">keywords:</span><br><span class="line">author: GoldenaArcher</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: https://goldenaarcher.github.io/</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<p>By default, the language is English.</p>
+<p>Have not played around the URL and subdirectory things, but I feel that’s what the author of <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank" rel="noopener">theme hipaper</a> did in his Hexo. The <a href="https://itimetraveler.github.io/hexo-theme-hipaper/" target="_blank" rel="noopener">sample theme</a> looks different than the <a href="https://itimetraveler.github.io/" target="_blank" rel="noopener">author’s blog</a>, though the links share the common header - <code>https://itimetraveler.github.io/</code>.</p>
+<hr>
+<h2 id="Config-Info-for-GitHub"><a href="#Config-Info-for-GitHub" class="headerlink" title="Config Info for GitHub"></a><a name="config-info-for-github">Config Info for GitHub</a></h2><p>Assume that public key for GitHub and/or RSA and/or username-password, and have been set up already. If not, following the <a href="https://help.github.com/en/articles/connecting-to-github-with-ssh" target="_blank" rel="noopener">help page from GitHub</a> to generate SSH key things. Then modifies <code>_config.yml</code>: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/GoldenaArcher/GoldenaArcher.github.io</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Deploy-Hexo"><a href="#Deploy-Hexo" class="headerlink" title="Deploy Hexo"></a>Deploy Hexo</h2><p>Deploy is very easy. For the first timer, after done with config Hexo locally, using following commands on git bash to deploy the project:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>Then everything will be deployed to the location configured under <code>deploy</code>.</p>
+<p>In my case, after this step, the blog is synced with Git page as I only configured GitHub site.</p>
+<p>It seems like by default Hexo upload files under <code>public</code> to deployment.</p>
+<p>If git bash indicates <code>Permission denied (publickey).</code>, go back to <a href="#config-info-for-github">previous section</a>, and check with GitHub documentation.</p>
+<h2 id="Common-Hexo-Command"><a href="#Common-Hexo-Command" class="headerlink" title="Common Hexo Command"></a>Common Hexo Command</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># common shortcut</span><br><span class="line">$ hexo n == hexo new</span><br><span class="line">$ hexo g == hexo generate</span><br><span class="line">$ hexo s == hexo server</span><br><span class="line">$ hexo d == hexo deploy</span><br><span class="line"></span><br><span class="line"># common combination</span><br><span class="line">$ hexo d -g # generate deployment</span><br><span class="line">$ hexo s -g # generate view</span><br><span class="line"></span><br><span class="line"># the combination I find to be useful as well</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="Change-Theme"><a href="#Change-Theme" class="headerlink" title="Change Theme"></a>Change Theme</h1><p>The default I remember was landscape, not bad but needs more function. Then I switched to <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank" rel="noopener">hipaper</a>, but found some glitches on Table of Content set up by default. Finally I decided change to <a href="https://theme-next.org/" target="_blank" rel="noopener">NexT</a> which is the theme I am using right now.</p>
+<h2 id="Download-Theme"><a href="#Download-Theme" class="headerlink" title="Download Theme"></a>Download Theme</h2><p>Make sure that the current directory is the home directory of the site, then using the command below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>After download finishes, the theme is downloaded.</p>
+<hr>
+<h2 id="Config-Theme"><a href="#Config-Theme" class="headerlink" title="Config Theme"></a>Config Theme</h2><p>Changes are still made in <code>_config.yml</code>. Search for <code>theme</code>, and made changes like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Apply-for-Changes"><a href="#Apply-for-Changes" class="headerlink" title="Apply for Changes"></a>Apply for Changes</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># to see it locally</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br><span class="line"># deploy the project</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>AND… That’s IT!</p>
+<hr>
+<h1 id="Some-Other-Useful-Config"><a href="#Some-Other-Useful-Config" class="headerlink" title="Some Other Useful Config"></a>Some Other Useful Config</h1><p>At this point, it’s pretty good, but the sections below might help to make the site better.</p>
+<h2 id="Add-Tags"><a href="#Add-Tags" class="headerlink" title="Add Tags"></a><a name="add-tags">Add Tags</a></h2><ol>
+<li><p>Create new tags directory under source folder, the code is listed below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir tags</span><br><span class="line">$ cd tags</span><br><span class="line">$ hexo new page &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>Edit <strong>index.md</strong> file, I did not change others, but add the following below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type: tags</span><br><span class="line">layout: tags</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>Edit _config.yml file as below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">	tags: /tags/</span><br></pre></td></tr></table></figure>
+
+<p>Note that in my theme, the designer named it menu, but I’ve seen in other themes named as <code>nav</code>. </p>
+</li>
+<li><p>Check the <em>config.yml of <em>_hexo</em></em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Directory</span><br><span class="line">tag_dir: tags</span><br></pre></td></tr></table></figure>
+
+<p>Most likely the config file for hexo does not need to modify, but still check it just in case.</p>
+</li>
+</ol>
+<hr>
+<h2 id="Add-Categories"><a href="#Add-Categories" class="headerlink" title="Add Categories"></a>Add Categories</h2><p>Basically identical to <a href="#add-tags">Add Tags</a>, just need to change <code>tags</code> to <code>categories</code>.</p>
+<ol>
+<li><p>Create new categories directory under source folder, the code is listed below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir categories </span><br><span class="line">$ cd categories </span><br><span class="line">$ hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Edit <strong>index.md</strong> file:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type: categories</span><br><span class="line">layout: categories</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Edit _config.yml file as below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">	categories: /categories/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Check the <em>config.yml of <em>_hexo</em></em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Directory</span><br><span class="line">category_dir: categories</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/05/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/07/Markdown-Study-Guide/" rel="prev" title="Markdown Study Guide">
+                Markdown Study Guide <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">GoldenaArcher</p>
+              <div class="site-description motion-element" itemprop="description">GoldenaArcher's personal blog</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Environment"><span class="nav-number">1.</span> <span class="nav-text">Environment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Install-and-Initialize-Hexo"><span class="nav-number">2.</span> <span class="nav-text">Install and Initialize Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Hexo"><span class="nav-number">2.1.</span> <span class="nav-text">Install Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialize-Hexo-and-Testrun"><span class="nav-number">2.2.</span> <span class="nav-text">Initialize Hexo and Testrun</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Config-and-Deploy-Hexo"><span class="nav-number">3.</span> <span class="nav-text">Config and Deploy Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-Info-for-Site"><span class="nav-number">3.1.</span> <span class="nav-text">Config Info for Site</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-Info-for-GitHub"><span class="nav-number">3.2.</span> <span class="nav-text">Config Info for GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deploy-Hexo"><span class="nav-number">3.3.</span> <span class="nav-text">Deploy Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Common-Hexo-Command"><span class="nav-number">3.4.</span> <span class="nav-text">Common Hexo Command</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Change-Theme"><span class="nav-number">4.</span> <span class="nav-text">Change Theme</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Download-Theme"><span class="nav-number">4.1.</span> <span class="nav-text">Download Theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-Theme"><span class="nav-number">4.2.</span> <span class="nav-text">Config Theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apply-for-Changes"><span class="nav-number">4.3.</span> <span class="nav-text">Apply for Changes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Some-Other-Useful-Config"><span class="nav-number">5.</span> <span class="nav-text">Some Other Useful Config</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Tags"><span class="nav-number">5.1.</span> <span class="nav-text">Add Tags</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Categories"><span class="nav-number">5.2.</span> <span class="nav-text">Add Categories</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-fas fa-paw"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GoldenaArcher</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

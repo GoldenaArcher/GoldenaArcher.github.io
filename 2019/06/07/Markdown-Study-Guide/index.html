@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Since markdown was introduced by one of my instructors, I have been using markdown for quite a while, and also used it for taking class notes as well. However, I have not yet fully discovered the po">
+<meta name="keywords" content="markdown,GitHub">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown Study Guide">
+<meta property="og:url" content="https://goldenaarcher.github.io/2019/06/07/Markdown-Study-Guide/index.html">
+<meta property="og:site_name" content="GoldenaArcher&#39;s Note">
+<meta property="og:description" content="Since markdown was introduced by one of my instructors, I have been using markdown for quite a while, and also used it for taking class notes as well. However, I have not yet fully discovered the po">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.imgur.com/1F7vyAe.png">
+<meta property="og:image" content="https://i.imgur.com/kX32xVe.png">
+<meta property="og:image" content="https://i.imgur.com/3c7O90e.png">
+<meta property="og:image" content="https://i.imgur.com/a4BjFTO.png">
+<meta property="og:image" content="https://i.imgur.com/KOEXjuL.jpg">
+<meta property="og:image" content="https://i.imgur.com/KOEXjuL.jpg">
+<meta property="og:updated_time" content="2019-06-08T14:17:23.120Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown Study Guide">
+<meta name="twitter:description" content="Since markdown was introduced by one of my instructors, I have been using markdown for quite a while, and also used it for taking class notes as well. However, I have not yet fully discovered the po">
+<meta name="twitter:image" content="https://i.imgur.com/1F7vyAe.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://goldenaarcher.github.io/2019/06/07/Markdown-Study-Guide/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Markdown Study Guide | GoldenaArcher's Note</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GoldenaArcher's Note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://goldenaarcher.github.io/2019/06/07/Markdown-Study-Guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GoldenaArcher">
+      <meta itemprop="description" content="GoldenaArcher's personal blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GoldenaArcher's Note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Markdown Study Guide
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-07 01:10:01" itemprop="dateCreated datePublished" datetime="2019-06-07T01:10:01+08:00">2019-06-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-08 22:17:23" itemprop="dateModified" datetime="2019-06-08T22:17:23+08:00">2019-06-08</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/GitHub-markdown/" itemprop="url" rel="index"><span itemprop="name">GitHub/markdown</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <img src="https://i.imgur.com/1F7vyAe.png" width="600">
+
+<p>Since markdown was introduced by one of my instructors, I have been using markdown for quite a while, and also used it for taking class notes as well. However, I have not yet fully discovered the potential of markdown, until recently I read that css and html languages can also be used directly in markdown. </p>
+<a id="more"></a>
+
+<p>Here is the sample code that I read:</p>
+<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight:bold;">
+Change the size, color and align of font
+</p>
+And this is the result that I saw:
+
+<img src="https://i.imgur.com/kX32xVe.png" width="400">
+
+<p>This blew my mind, and I decided to spend more time on studying markdown. Later, the idea of learning and being more organized turned to be the motivation for the post.</p>
+<hr>
+<h1 id="Basic-Syntax"><a href="#Basic-Syntax" class="headerlink" title="Basic Syntax"></a>Basic Syntax</h1><h2 id="Basic-Text-Formatting"><a href="#Basic-Text-Formatting" class="headerlink" title="Basic Text Formatting"></a>Basic Text Formatting</h2><h3 id="Italic"><a href="#Italic" class="headerlink" title="Italic"></a>Italic</h3><p><code>&lt;i&gt;</code></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*italic*</span> or <span class="emphasis">_italic_</span></span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p><em>italic</em> or <em>italic</em></p>
+<hr>
+<h3 id="bold"><a href="#bold" class="headerlink" title="bold"></a>bold</h3><p><code>&lt;b&gt;</code></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**bold**</span> or <span class="strong">__bold__</span></span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p><strong>bold</strong> or <strong>bold</strong></p>
+<hr>
+<h3 id="Italic-and-Bold"><a href="#Italic-and-Bold" class="headerlink" title="Italic and Bold"></a>Italic and Bold</h3><p><code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> of course</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">___italic and bold__</span>_ or <span class="strong">***italic and bold**</span>*</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p><strong><em>italic and bold</em></strong> or <strong><em>italic and bold</em></strong></p>
+<hr>
+<h3 id="Strikethrough"><a href="#Strikethrough" class="headerlink" title="Strikethrough"></a>Strikethrough</h3><p><code>&lt;del&gt;</code></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~strikethrough~~</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p><del>strikethrough</del></p>
+<hr>
+<h3 id="Carriage-Return"><a href="#Carriage-Return" class="headerlink" title="Carriage Return"></a>Carriage Return</h3><p><code>&lt;br&gt;</code> for line break, and <code>&lt;p&gt;</code> for paragraph.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A carriage return</span><br><span class="line">makes a line break.</span><br><span class="line"></span><br><span class="line">Two carriage returns make a new paragraph.</span><br></pre></td></tr></table></figure>
+
+<p>A carriage return<br>makes a line break.</p>
+<p>Two carriage returns make a new paragraph.</p>
+<hr>
+<h3 id="Other-Basic-Syntax"><a href="#Other-Basic-Syntax" class="headerlink" title="Other Basic Syntax"></a>Other Basic Syntax</h3><h4 id="Strong"><a href="#Strong" class="headerlink" title="Strong"></a>Strong</h4><p><code>&lt;Strong&gt;</code> - this is <strong>important</strong></p>
+<hr>
+<h4 id="Emphasis"><a href="#Emphasis" class="headerlink" title="Emphasis"></a>Emphasis</h4><p><code>&lt;em&gt;</code> - this is <em>emphasized</em></p>
+<hr>
+<h4 id="Mark"><a href="#Mark" class="headerlink" title="Mark"></a>Mark</h4><p><code>&lt;mark&gt;</code> - this is <mark>marked</mark></p>
+<hr>
+<h4 id="Small"><a href="#Small" class="headerlink" title="Small"></a>Small</h4><p><code>&lt;small&gt;</code> - this is <small>small</small></p>
+<hr>
+<h4 id="inserted"><a href="#inserted" class="headerlink" title="inserted"></a>inserted</h4><p><code>&lt;ins&gt;</code> - this is <ins>inserted</ins></p>
+<hr>
+<h4 id="Subscript"><a href="#Subscript" class="headerlink" title="Subscript"></a>Subscript</h4><p><code>&lt;sub&gt;</code> - this is <sub>subscript</sub></p>
+<hr>
+<h4 id="Superscript"><a href="#Superscript" class="headerlink" title="Superscript"></a>Superscript</h4><p><code>&lt;sup&gt;</code> - this is <sup>superscript</sup></p>
+<hr>
+<h3 id="Horizontal-Rules"><a href="#Horizontal-Rules" class="headerlink" title="Horizontal Rules"></a>Horizontal Rules</h3><p>Which is the divider used between sections, consists of three or more *’s or -‘s on a single line.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br><span class="line">--------------------</span><br><span class="line">******************</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Backslash-Escapes"><a href="#Backslash-Escapes" class="headerlink" title="Backslash Escapes"></a>Backslash Escapes</h3><p>Used for special characters so that they can be displayed normally.</p>
+<p>Markdown provides backslashes for the following characters:</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;\   backslash</span><br><span class="line">&gt;`   backtick</span><br><span class="line">&gt;*   asterisk</span><br><span class="line">&gt;_   underscore</span><br><span class="line">&gt;&#123;&#125;  curly braces</span><br><span class="line">&gt;[]  square brackets</span><br><span class="line">&gt;()  parentheses</span><br><span class="line">&gt;#   hash mark</span><br><span class="line">&gt;+   plus sign</span><br><span class="line">&gt;-   minus sign (hyphen)</span><br><span class="line">&gt;.   dot</span><br><span class="line">&gt;!   exclamation mark</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\. \* \\</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p>. * \ </p>
+<h2 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h2><h3 id="Setex"><a href="#Setex" class="headerlink" title="Setex"></a>Setex</h3><p>Used for <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> tags.</p>
+<p>“Underlined” using <strong>equal signs (=)</strong> as <code>&lt;h1&gt;</code> and <strong>dashes (-)</strong> as <code>&lt;h2&gt;</code> in any number</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">This is an H1</span><br><span class="line">==============</span><br><span class="line">This is an H2</span><br><span class="line">--------------</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<img src="https://i.imgur.com/3c7O90e.png" width="400">
+
+<hr>
+<h3 id="Atax"><a href="#Atax" class="headerlink" title="Atax"></a>Atax</h3><p>HTML tags are <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, and <code>&lt;h6&gt;</code>, use 1-6 hash character to correspond desired <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># This is an H1</span><br><span class="line">## This is an H2</span><br><span class="line">### This is an H3</span><br><span class="line">#### This is an H4</span><br><span class="line">##### This is an H5</span><br><span class="line">###### This is an H6</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<img src="https://i.imgur.com/a4BjFTO.png" width="200" align="middle">
+
+<hr>
+<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><p><code>&lt;a&gt;</code></p>
+<p>Most links will be automatically turned into links, to be more explicit, use <code>&lt;&gt;</code> surround the link.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">https:</span>//<span class="attr">www.amazon.com</span>/&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">some@example.com</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p><a href="https://www.amazon.com/" target="_blank" rel="noopener">https://www.amazon.com/</a></p>
+<p><a href="mailto:&#115;&#111;&#x6d;&#101;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#115;&#111;&#x6d;&#101;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<hr>
+<h3 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h3><p>The format for inline like is: <code>[text](https://abc.com &quot;Title&quot;)</code>, if <code>Title</code> is neglected, then there is no <code>Title</code> attributes for the link, which means when mouse is hovered over the text, there will be no title displayed for the link. </p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Google</span>](<span class="link">https://www.google.com/ "Google"</span>)</span><br><span class="line">[<span class="string">Google</span>](<span class="link">https://www.google.com/</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p><a href="https://www.google.com/" title="Google" target="_blank" rel="noopener">Google</a> and <a href="https://www.google.com/" target="_blank" rel="noopener">Google</a></p>
+<hr>
+<p>Also, when referring to a local resource on the same server, relative path can be used.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Hello World</span>](<span class="link">/2019/06/05/hello-world/</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p><a href="/2019/06/05/hello-world/">Hello World</a></p>
+<p>Also, the markdown images on the top of the page is inserted by using relative path.</p>
+<hr>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>The format for reference is: <code>[text]: URL &quot;title&quot;</code> for defining source, and use <code>[text][reference]</code>to link text and reference. This is useful when links are used for multiple times in some content.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">1</span>]: <span class="link">https://en.wikipedia.org/wiki/Main_Page "wikipedia main page"</span></span><br><span class="line">[<span class="symbol">wikipedia main page</span>]: <span class="link">https://en.wikipedia.org/wiki/Main_Page "wikipedia main page"</span></span><br><span class="line">This is [<span class="string">wikipedia main page</span>][<span class="symbol">1</span>].</span><br><span class="line">This is [<span class="string">wikipedia mainpage</span>][<span class="symbol"></span>] as well.</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p>This is <a href="https://en.wikipedia.org/wiki/Main_Page" title="wikipedia main page" target="_blank" rel="noopener">wikipedia main page</a>.<br><br>This is <a href="https://en.wikipedia.org/wiki/Main_Page" title="wikipedia main page" target="_blank" rel="noopener">wikipedia main page</a> as well.</p>
+<hr>
+<h3 id="Anchor-Reference"><a href="#Anchor-Reference" class="headerlink" title="Anchor Reference"></a>Anchor Reference</h3><p>Similar to reference, but anchor reference is used to link in-text anchor point. I have read in some <a href="https://stackoverflow.com/questions/6695439/how-to-link-to-a-named-anchor-in-multimarkdown/6706594" target="_blank" rel="noopener">stackoverrflow comments</a> which stated that header will generate anchor point by default. I tried on this post, nothing really worked, but perhaps works in other place.</p>
+<p>Basically, anchor reference used html <code>&lt;a&gt;</code> tag to create an anchor point which is accessible as long as the linkage is in the same page.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">set an anchor link</span><br><span class="line">&lt;a name=&quot;anchor&quot;&gt;anchor&lt;/a&gt;</span><br><span class="line">...as long as they are in the same page...</span><br><span class="line">[text](#anchor)</span><br><span class="line"></span><br><span class="line">TO CREATE AN ANCHOR IN HEADING</span><br><span class="line">[create an anchor](#anchors-in-this-page)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h2><p>Similar to links, just have <code>!</code> in front of link.</p>
+<h3 id="Inline-1"><a href="#Inline-1" class="headerlink" title="Inline"></a>Inline</h3><p><code>&lt;img src=&quot;&quot;&gt;</code></p>
+<p>Syntax: <code>![images](https://link.com &quot;alt&quot;)</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![flower](https://i.imgur.com/KOEXjuL.jpg &quot;flower&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p><img src="https://i.imgur.com/KOEXjuL.jpg" alt="flower"></p>
+<h3 id="Reference-1"><a href="#Reference-1" class="headerlink" title="Reference"></a>Reference</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![flower][flower]</span><br><span class="line">[flower]:https://i.imgur.com/KOEXjuL.jpg &quot;flower&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p><img src="https://i.imgur.com/KOEXjuL.jpg" alt="flower" title="flower"></p>
+<hr>
+<h3 id="Attached-Link"><a href="#Attached-Link" class="headerlink" title="Attached Link"></a>Attached Link</h3><p>I’m not planning to attach images here, so, just add context here as a reference.</p>
+<p><code>[[img src=attached-image.jpg alt=image]]</code></p>
+<h1 id="List"><a href="#List" class="headerlink" title="List"></a>List</h1><h2 id="Unordered-List"><a href="#Unordered-List" class="headerlink" title="Unordered List"></a>Unordered List</h2><p>use *, -, + to create an unordered list, <code>&lt;ul&gt;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- unordered list 1</span><br><span class="line">	- nested unordered list 1.1</span><br><span class="line">+ unordered list 2</span><br><span class="line">* unordered list 3</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<ul>
+<li><p>unordered list 1</p>
+<ul>
+<li>nested unordered list 1.1<ul>
+<li>nested unordered list 1.1.1<ul>
+<li>etc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>unordered list 2</p>
+</li>
+<li><p>unordered list 3</p>
+</li>
+</ul>
+<hr>
+<h2 id="Ordered-List"><a href="#Ordered-List" class="headerlink" title="Ordered List"></a>Ordered List</h2><p>Similar to unordered list, but use 1 instead. </p>
+<p>I feel like in this case, perhaps using html is a clearer way of creating an ordered list.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. point A</span><br><span class="line">	1. point A.a</span><br><span class="line">	2. point A.b</span><br><span class="line">2. point B</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>point A<ol>
+<li>point A.a</li>
+<li>point A.b</li>
+</ol>
+</li>
+<li>point B</li>
+</ol>
+<p>It is possible to trigger an ordered list by accident:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1986. What a great season.</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<ol start="1986">
+<li>What a great season.</li>
+</ol>
+<p>In this case, a <strong>backslash_escape(\)</strong> can be used to resolve the issue:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1986\. What a great season.</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p>1986. What a great season.</p>
+<hr>
+<h2 id="Definition-List"><a href="#Definition-List" class="headerlink" title="Definition List"></a>Definition List</h2><p>Seemed not supported by GitHub page… But seemed fun to play around, so I decided to add the item here.</p>
+<p>This is the markdown syntax:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">First Term</span><br><span class="line">: This is the definition of the first term.</span><br><span class="line"></span><br><span class="line">Second Term</span><br><span class="line">: This is one definition of the second term.</span><br><span class="line">: This is another definition of the second term.</span><br></pre></td></tr></table></figure>
+
+<p>This is the corresponding html syntax:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">  &lt;dt&gt;First Term&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;This is the definition of the first term.&lt;/dd&gt;</span><br><span class="line">  &lt;dt&gt;Second Term&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;This is one definition of the second term. &lt;/dd&gt;</span><br><span class="line">  &lt;dd&gt;This is another definition of the second term.&lt;/dd&gt;</span><br><span class="line">&lt;/dl&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Output from html syntax:</p>
+<dl>
+  <dt>First Term</dt>
+  <dd>This is the definition of the first term.</dd>
+  <dt>Second Term</dt>
+  <dd>This is one definition of the second term. </dd>
+  <dd>This is another definition of the second term.</dd>
+</dl>
+***
+
+<h2 id="Check-List"><a href="#Check-List" class="headerlink" title="Check List"></a>Check List</h2><p>Looks  like to-do list.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- [ ] not checked</span><br><span class="line">- [ ] not checked</span><br><span class="line">- [x] checked</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<ul>
+<li><input disabled type="checkbox"> not checked</li>
+<li><input disabled type="checkbox"> not checked</li>
+<li><input checked disabled type="checkbox"> checked</li>
+</ul>
+<hr>
+<h1 id="Indent"><a href="#Indent" class="headerlink" title="Indent"></a>Indent</h1><h2 id="Blockquote"><a href="#Blockquote" class="headerlink" title="Blockquote"></a>Blockquote</h2><p>Just put <strong>&gt;</strong> in front of the paragraph or text.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A list item with block quote</span><br><span class="line">&gt; Blockquote</span><br><span class="line">&gt; with indentation</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p>A list item with block quote</p>
+<blockquote>
+<p>Blockquote<br>with indentation</p>
+</blockquote>
+<p>Can also only put in front of the paragraph.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A list item with block quote</span><br><span class="line">&gt; Blockquote</span><br><span class="line">with indentation</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<p>A list item with block quote</p>
+<blockquote>
+<p>Blockquote<br>with indentation</p>
+</blockquote>
+<h2 id="Nested-Blockquote"><a href="#Nested-Blockquote" class="headerlink" title="Nested Blockquote"></a>Nested Blockquote</h2><p>Like reference of reference.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; A blockquote</span><br><span class="line">&gt;&gt; Nested blockquote</span><br><span class="line">&gt;&gt;&gt; Another nested blockquote</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>A blockquote</p>
+<blockquote>
+<p>Nested blockquote</p>
+<blockquote>
+<p>Another nested blockquote</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="Code-Block"><a href="#Code-Block" class="headerlink" title="Code Block"></a>Code Block</h2><p>For some reason, it does not work same when I read in other place:</p>
+<blockquote>
+<p>To put a code block within a list item, the code block needs to be indented twice — <strong>8 spaces</strong> or <strong>two tabs</strong></p>
+</blockquote>
+<p>It only works in this particular format:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* List 1</span><br><span class="line"></span><br><span class="line">      printf()</span><br></pre></td></tr></table></figure>
+
+<p>Outcome:</p>
+<ul>
+<li><p>List 1</p>
+<pre><code>printf()</code></pre></li>
+</ul>
+<p>Perhaps just easier to use code blocks directly.</p>
+<hr>
+<h1 id="Code-Blocks"><a href="#Code-Blocks" class="headerlink" title="Code Blocks"></a>Code Blocks</h1><p><code>&lt;pre&gt;</code> in html. </p>
+<p>I found in different places they said that </p>
+<blockquote>
+<p>Indent every line of the block by at least <strong>4 spaces</strong> or <strong>1 tab</strong>.</p>
+</blockquote>
+<p>But this part is true:</p>
+<blockquote>
+<p>Within a code block, <strong>ampersands (&amp;)</strong> and angle <strong>brackets (&lt; and &gt;)</strong> are automatically converted into HTML entities.</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span> <span class="attr">style</span>=<span class="string">"text-align: center"</span>&gt;</span></span><br><span class="line">    &amp;copy; 2004 Foo Corporation</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Outcome:</p>
+<div class="footer" style="text-align: center">
+    &copy; 2004 Foo Corporation
+</div>
+
+<h2 id="Fenced-Code-Blocks"><a href="#Fenced-Code-Blocks" class="headerlink" title="Fenced Code Blocks"></a>Fenced Code Blocks</h2><p><code>&lt;code&gt;</code></p>
+<p>I found this works way better than indentation directly.</p>
+<p><code>~</code>and <code>`</code> works the same way.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">This is a normal paragraph:</span><br><span class="line">\`\`\`</span><br><span class="line">    This is a code block.</span><br><span class="line">\`\`\`</span><br></pre></td></tr></table></figure>
+
+<p>Outcome:</p>
+<p>This is a normal paragraph:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This is a code block.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Syntax-Highlighting"><a href="#Syntax-Highlighting" class="headerlink" title="Syntax Highlighting"></a>Syntax Highlighting</h3><p>This is the way I like to do it, adding the language after ```.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\`\`\`Java</span><br><span class="line">System.out.println(&quot;hello world&quot;);</span><br><span class="line">\`\`\`</span><br></pre></td></tr></table></figure>
+
+<p>Outcome:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"hello world"</span>);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Inline-Code"><a href="#Inline-Code" class="headerlink" title="Inline Code"></a>Inline Code</h2><p>Just use ` between inline code</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use `System.out.println();` to print in Java</span><br></pre></td></tr></table></figure>
+
+<p>Outcome:</p>
+<p>Use <code>System.out.println();</code> to print in Java</p>
+<hr>
+<h1 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h1><p><code>&lt;table&gt;</code></p>
+<p>Column separator is <strong>pipe (|)</strong>; the header is separated by <strong>dashes(-)</strong>; the <strong>colon(:)</strong> is used for alignment.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name | id | score </span><br><span class="line">- | - | -</span><br><span class="line">A | 1 | A</span><br><span class="line">B | 2 | A+</span><br></pre></td></tr></table></figure>
+
+<p>Outcome:</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>id</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>1</td>
+<td>A</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>A+</td>
+</tr>
+</tbody></table>
+<hr>
+<p>Whether outer pipe exists or not, there is no effect:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| name | id | score |</span><br><span class="line">| - | - | - |</span><br><span class="line">| A | 1 | A |</span><br><span class="line">| B | 2 | A+ |</span><br></pre></td></tr></table></figure>
+
+<p>Outcome:</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>id</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>1</td>
+<td>A</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>A+</td>
+</tr>
+</tbody></table>
+<hr>
+<p>Also, this example shows how to align the table:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name | id | score </span><br><span class="line">:--- | :---: | ---:</span><br><span class="line">A | 1 | A</span><br><span class="line">B | 2 | A+</span><br></pre></td></tr></table></figure>
+
+<p>Outcome:</p>
+<table>
+<thead>
+<tr>
+<th align="left">name</th>
+<th align="center">id</th>
+<th align="right">score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">A</td>
+<td align="center">1</td>
+<td align="right">A</td>
+</tr>
+<tr>
+<td align="left">B</td>
+<td align="center">2</td>
+<td align="right">A+</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="Not-GitHub-flavored-Functions"><a href="#Not-GitHub-flavored-Functions" class="headerlink" title="Not GitHub-flavored Functions"></a>Not GitHub-flavored Functions</h1><p>I found these not working on the git page, but might be worth it to dig deeper.</p>
+<h2 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Markdown[^1]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h2><p><code>[toc]</code></p>
+<hr>
+<h2 id="Flowchart"><a href="#Flowchart" class="headerlink" title="Flowchart"></a>Flowchart</h2><p>Have not yet studied.</p>
+<hr>
+<h2 id="Video-and-Audio-Insertion"><a href="#Video-and-Audio-Insertion" class="headerlink" title="Video and Audio Insertion"></a>Video and Audio Insertion</h2><hr>
+<h2 id="LateX"><a href="#LateX" class="headerlink" title="LateX"></a>LateX</h2><hr>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/markdown/" rel="tag"># markdown</a>
+          
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/07/Build-GitHub-Page-with-Hexo/" rel="next" title="Build GitHub Page with Hexo">
+                <i class="fa fa-chevron-left"></i> Build GitHub Page with Hexo
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">GoldenaArcher</p>
+              <div class="site-description motion-element" itemprop="description">GoldenaArcher's personal blog</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Basic-Syntax"><span class="nav-number">1.</span> <span class="nav-text">Basic Syntax</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Text-Formatting"><span class="nav-number">1.1.</span> <span class="nav-text">Basic Text Formatting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Italic"><span class="nav-number">1.1.1.</span> <span class="nav-text">Italic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bold"><span class="nav-number">1.1.2.</span> <span class="nav-text">bold</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Italic-and-Bold"><span class="nav-number">1.1.3.</span> <span class="nav-text">Italic and Bold</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Strikethrough"><span class="nav-number">1.1.4.</span> <span class="nav-text">Strikethrough</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Carriage-Return"><span class="nav-number">1.1.5.</span> <span class="nav-text">Carriage Return</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other-Basic-Syntax"><span class="nav-number">1.1.6.</span> <span class="nav-text">Other Basic Syntax</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Strong"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">Strong</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Emphasis"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">Emphasis</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mark"><span class="nav-number">1.1.6.3.</span> <span class="nav-text">Mark</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Small"><span class="nav-number">1.1.6.4.</span> <span class="nav-text">Small</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#inserted"><span class="nav-number">1.1.6.5.</span> <span class="nav-text">inserted</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Subscript"><span class="nav-number">1.1.6.6.</span> <span class="nav-text">Subscript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Superscript"><span class="nav-number">1.1.6.7.</span> <span class="nav-text">Superscript</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Horizontal-Rules"><span class="nav-number">1.1.7.</span> <span class="nav-text">Horizontal Rules</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Backslash-Escapes"><span class="nav-number">1.1.8.</span> <span class="nav-text">Backslash Escapes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Headers"><span class="nav-number">1.2.</span> <span class="nav-text">Headers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Setex"><span class="nav-number">1.2.1.</span> <span class="nav-text">Setex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Atax"><span class="nav-number">1.2.2.</span> <span class="nav-text">Atax</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Links"><span class="nav-number">1.3.</span> <span class="nav-text">Links</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Inline"><span class="nav-number">1.3.1.</span> <span class="nav-text">Inline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.3.2.</span> <span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Anchor-Reference"><span class="nav-number">1.3.3.</span> <span class="nav-text">Anchor Reference</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Images"><span class="nav-number">1.4.</span> <span class="nav-text">Images</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Inline-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">Inline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attached-Link"><span class="nav-number">1.4.3.</span> <span class="nav-text">Attached Link</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#List"><span class="nav-number">2.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unordered-List"><span class="nav-number">2.1.</span> <span class="nav-text">Unordered List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ordered-List"><span class="nav-number">2.2.</span> <span class="nav-text">Ordered List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-List"><span class="nav-number">2.3.</span> <span class="nav-text">Definition List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Check-List"><span class="nav-number">2.4.</span> <span class="nav-text">Check List</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Indent"><span class="nav-number">3.</span> <span class="nav-text">Indent</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Blockquote"><span class="nav-number">3.1.</span> <span class="nav-text">Blockquote</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nested-Blockquote"><span class="nav-number">3.2.</span> <span class="nav-text">Nested Blockquote</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Block"><span class="nav-number">3.3.</span> <span class="nav-text">Code Block</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-Blocks"><span class="nav-number">4.</span> <span class="nav-text">Code Blocks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fenced-Code-Blocks"><span class="nav-number">4.1.</span> <span class="nav-text">Fenced Code Blocks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Syntax-Highlighting"><span class="nav-number">4.1.1.</span> <span class="nav-text">Syntax Highlighting</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inline-Code"><span class="nav-number">4.2.</span> <span class="nav-text">Inline Code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tables"><span class="nav-number">5.</span> <span class="nav-text">Tables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Not-GitHub-flavored-Functions"><span class="nav-number">6.</span> <span class="nav-text">Not GitHub-flavored Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnotes"><span class="nav-number">6.1.</span> <span class="nav-text">Footnotes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TOC"><span class="nav-number">6.2.</span> <span class="nav-text">TOC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flowchart"><span class="nav-number">6.3.</span> <span class="nav-text">Flowchart</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Video-and-Audio-Insertion"><span class="nav-number">6.4.</span> <span class="nav-text">Video and Audio Insertion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LateX"><span class="nav-number">6.5.</span> <span class="nav-text">LateX</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-fas fa-paw"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GoldenaArcher</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
