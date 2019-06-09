@@ -400,6 +400,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="https://pm1.narvii.com/7198/6a55e4856d3661fe99753dff73e32d6cb99c9035r1-2048-2048v2_hq.jpg" alt="GoldenaArcher">
+            
               <p class="site-author-name" itemprop="name">GoldenaArcher</p>
               <div class="site-description motion-element" itemprop="description">GoldenaArcher's personal blog</div>
           </div>
@@ -411,7 +413,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -432,7 +434,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -455,7 +461,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -468,10 +478,39 @@
           
 
           
-
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/GoldenaArcher" title="GitHub &rarr; https://github.com/GoldenaArcher" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            </div>
           
 
           
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://wvincen.gitee.io/" title="https://wvincen.gitee.io/" rel="noopener" target="_blank">Mr.Vincent</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
@@ -509,7 +548,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">17k</span>
+    <span title="Symbols count total">21k</span>
   
 
   
@@ -518,7 +557,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">15 mins.</span>
+    <span title="Reading time total">19 mins.</span>
   
 </div>
 
@@ -649,6 +688,74 @@
 
 
   
+  
+  <script>
+    
+    function showTime(Counter) {
+      var entries = [];
+      var $visitors = $('.leancloud_visitors');
+
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+        .done(function({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'k1PeJygbJj4Ucb9bp9Mqbzil-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'k1PeJygbJj4Ucb9bp9Mqbzil-gzGzoHsz',
+                'X-LC-Key': 'XuyUa3Vxte9p98l5kI7bXuQJ',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
+          
+        });
+    });
+  </script>
+
+
 
   
 
