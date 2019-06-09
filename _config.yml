@@ -89,3 +89,10 @@ symbols_count_time:
   total_symbols: true
   total_time: true
   exclude_codeblock: false
+  
+leancloud_counter_security:
+  enable_sync: true
+  app_id: <<your app id>>
+  app_key: <<your app key>
+  username: 
+  password:

@@ -1,7 +1,7 @@
 ---
 title: NexT Upgrade
 date: 2019-06-09 17:42:43
-tags: [Hexo, NexT]
+tags: [Hexo, NexT, GitHub]
 categories: Hext/Next
 ---
 
@@ -103,6 +103,35 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
+```
+
+---
+
+# Avatar
+
+```
+# Sidebar Avatar
+avatar:
+  # In theme directory (source/images): /images/avatar.gif
+  # In site directory (source/uploads): /uploads/avatar.gif
+  # You can also use other linking images.
+  url: put url here
+  # If true, the avatar would be dispalyed in circle.
+  rounded: false
+  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
+  opacity: 1
+  # If true, the avatar would be rotated with the cursor.
+  rotated: false
+```
+
+---
+
+# Since
+
+```
+footer:
+  # Specify the date when the site was setup. If not defined, current year will be used.
+  since: 2019
 ```
 
 ---
