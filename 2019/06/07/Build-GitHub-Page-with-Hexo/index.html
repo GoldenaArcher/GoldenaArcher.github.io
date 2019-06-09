@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="GoldenaArcher&#39;s Note">
 <meta property="og:description" content="I have set up io site for GitHub for a while, have not really play with the Git page anyway. However, since I started to study more and more, I feel like to have some place supports Markdown so that I">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-09T06:55:57.727Z">
+<meta property="og:updated_time" content="2019-06-09T08:41:36.857Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build GitHub Page with Hexo">
 <meta name="twitter:description" content="I have set up io site for GitHub for a while, have not really play with the Git page anyway. However, since I started to study more and more, I feel like to have some place supports Markdown so that I">
@@ -384,7 +384,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-09 14:55:57" itemprop="dateModified" datetime="2019-06-09T14:55:57+08:00">2019-06-09</time>
+                <time title="Modified: 2019-06-09 16:41:36" itemprop="dateModified" datetime="2019-06-09T16:41:36+08:00">2019-06-09</time>
               
             
           </span>
@@ -419,6 +419,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article">7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">6 mins.</span>
+              
+            </div>
           
 
           
@@ -485,7 +513,7 @@
 <p>In my case, after this step, the blog is synced with Git page as I only configured GitHub site.</p>
 <p>It seems like by default Hexo upload files under <code>public</code> to deployment.</p>
 <p>If git bash indicates <code>Permission denied (publickey).</code>, go back to <a href="#config-info-for-github">previous section</a>, and check with GitHub documentation.</p>
-<h2 id="Common-Hexo-Command"><a href="#Common-Hexo-Command" class="headerlink" title="Common Hexo Command"></a>Common Hexo Command</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># common shortcut</span><br><span class="line">$ hexo n == hexo new</span><br><span class="line">$ hexo g == hexo generate</span><br><span class="line">$ hexo s == hexo server</span><br><span class="line">$ hexo d == hexo deploy</span><br><span class="line"></span><br><span class="line"># common combination</span><br><span class="line">$ hexo d -g # generate deployment</span><br><span class="line">$ hexo s -g # generate view</span><br><span class="line"></span><br><span class="line"># the combination I find to be useful as well</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="Common-Hexo-Command"><a href="#Common-Hexo-Command" class="headerlink" title="Common Hexo Command"></a>Common Hexo Command</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># common shortcut</span><br><span class="line">$ hexo n == hexo new</span><br><span class="line">$ hexo g == hexo generate</span><br><span class="line">$ hexo s == hexo server</span><br><span class="line">$ hexo d == hexo deploy</span><br><span class="line"></span><br><span class="line"># common combination</span><br><span class="line">$ hexo d -g # generate deployment</span><br><span class="line">$ hexo s -g # generate view</span><br><span class="line"></span><br><span class="line"># the combination I find to be useful as well</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br><span class="line"></span><br><span class="line"># can be used to monitor files</span><br><span class="line">$ hexo generate --watch</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h1 id="Change-Theme"><a href="#Change-Theme" class="headerlink" title="Change Theme"></a>Change Theme</h1><p>The default I remember was landscape, not bad but needs more function. Then I switched to <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank" rel="noopener">hipaper</a>, but found some glitches on Table of Content set up by default. Finally I decided change to <a href="https://theme-next.org/" target="_blank" rel="noopener">NexT</a> which is the theme I am using right now.</p>
@@ -506,20 +534,10 @@
 <h2 id="Add-Tags"><a href="#Add-Tags" class="headerlink" title="Add Tags"></a><a name="add-tags">Add Tags</a></h2><ol>
 <li><p>Create new tags directory under source folder, the code is listed below:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir tags</span><br><span class="line">$ cd tags</span><br><span class="line">$ hexo new page &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-
-
-
 </li>
-</ol>
-<ol start="2">
 <li><p>Edit <strong>index.md</strong> file, I did not change others, but add the following below:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type: tags</span><br><span class="line">layout: tags</span><br></pre></td></tr></table></figure>
-
-
-
 </li>
-</ol>
-<ol start="3">
 <li><p>Edit _config.yml file as below:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">	tags: /tags/</span><br></pre></td></tr></table></figure>
 
@@ -549,7 +567,19 @@
 </li>
 </ol>
 <hr>
-<h2 id="Change-Templates"><a href="#Change-Templates" class="headerlink" title="Change Templates"></a>Change Templates</h2><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://gist.github.com/btfak/18938572f5df000ebe06fbd1872e4e39#2-create-a-project-for-your-github-pages" target="_blank" rel="noopener">How to use Hexo and deploy to GitHub Pages</a></p>
+<h2 id="Change-Templates"><a href="#Change-Templates" class="headerlink" title="Change Templates"></a>Change Templates</h2><p>Add <code>categories</code> to the post template. Update the  <code>/scaffolds/post.md</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: </span><br><span class="line">categories: </span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>Now, when type <code>$ hexo new filename</code> to generate new post, the default settings are:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: test-post</span><br><span class="line">date: 2019-06-09 16:15:03</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>Which saves some time from typing <code>categories:</code> all the time.</p>
+<hr>
+<h2 id="Push-All-Files-on-GitHub"><a href="#Push-All-Files-on-GitHub" class="headerlink" title="Push All Files on GitHub"></a>Push All Files on GitHub</h2><p>With the default deploy, Hexo only push files under <code>public</code> to GitHub. However, when working with different computers, there will be issues. Checking out another branch to keep all the files can save the trouble:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># make sure it&apos;s at the root</span><br><span class="line">git init</span><br><span class="line">git remote add origin site&apos;s_source_on_git   # add the repo to origin</span><br><span class="line">git checkout -b hexo   		 # create a new branch</span><br><span class="line">git add . 			 # add all the changes</span><br><span class="line">git commit -m &quot;commit&quot;  # commit all changes</span><br><span class="line">git push origin hexo   # push all changes to branch hexo</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://gist.github.com/btfak/18938572f5df000ebe06fbd1872e4e39#2-create-a-project-for-your-github-pages" target="_blank" rel="noopener">How to use Hexo and deploy to GitHub Pages</a></p>
 <p><a href="https://11.tt/posts/2018/set-up-hexo-with-coding-and-github/" target="_blank" rel="noopener">基于Hexo+Coding+Github搭建个人博客的全过程</a></p>
 
       
@@ -755,7 +785,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Environment"><span class="nav-number">1.</span> <span class="nav-text">Environment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Install-and-Initialize-Hexo"><span class="nav-number">2.</span> <span class="nav-text">Install and Initialize Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Hexo"><span class="nav-number">2.1.</span> <span class="nav-text">Install Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialize-Hexo-and-Testrun"><span class="nav-number">2.2.</span> <span class="nav-text">Initialize Hexo and Testrun</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Config-and-Deploy-Hexo"><span class="nav-number">3.</span> <span class="nav-text">Config and Deploy Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-Info-for-Site"><span class="nav-number">3.1.</span> <span class="nav-text">Config Info for Site</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-Info-for-GitHub"><span class="nav-number">3.2.</span> <span class="nav-text">Config Info for GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deploy-Hexo"><span class="nav-number">3.3.</span> <span class="nav-text">Deploy Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Common-Hexo-Command"><span class="nav-number">3.4.</span> <span class="nav-text">Common Hexo Command</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Change-Theme"><span class="nav-number">4.</span> <span class="nav-text">Change Theme</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Download-Theme"><span class="nav-number">4.1.</span> <span class="nav-text">Download Theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-Theme"><span class="nav-number">4.2.</span> <span class="nav-text">Config Theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apply-for-Changes"><span class="nav-number">4.3.</span> <span class="nav-text">Apply for Changes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Some-Other-Useful-Config"><span class="nav-number">5.</span> <span class="nav-text">Some Other Useful Config</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Tags"><span class="nav-number">5.1.</span> <span class="nav-text">Add Tags</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Categories"><span class="nav-number">5.2.</span> <span class="nav-text">Add Categories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Templates"><span class="nav-number">5.3.</span> <span class="nav-text">Change Templates</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Environment"><span class="nav-number">1.</span> <span class="nav-text">Environment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Install-and-Initialize-Hexo"><span class="nav-number">2.</span> <span class="nav-text">Install and Initialize Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Hexo"><span class="nav-number">2.1.</span> <span class="nav-text">Install Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialize-Hexo-and-Testrun"><span class="nav-number">2.2.</span> <span class="nav-text">Initialize Hexo and Testrun</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Config-and-Deploy-Hexo"><span class="nav-number">3.</span> <span class="nav-text">Config and Deploy Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-Info-for-Site"><span class="nav-number">3.1.</span> <span class="nav-text">Config Info for Site</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-Info-for-GitHub"><span class="nav-number">3.2.</span> <span class="nav-text">Config Info for GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deploy-Hexo"><span class="nav-number">3.3.</span> <span class="nav-text">Deploy Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Common-Hexo-Command"><span class="nav-number">3.4.</span> <span class="nav-text">Common Hexo Command</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Change-Theme"><span class="nav-number">4.</span> <span class="nav-text">Change Theme</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Download-Theme"><span class="nav-number">4.1.</span> <span class="nav-text">Download Theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-Theme"><span class="nav-number">4.2.</span> <span class="nav-text">Config Theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apply-for-Changes"><span class="nav-number">4.3.</span> <span class="nav-text">Apply for Changes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Some-Other-Useful-Config"><span class="nav-number">5.</span> <span class="nav-text">Some Other Useful Config</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Tags"><span class="nav-number">5.1.</span> <span class="nav-text">Add Tags</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Categories"><span class="nav-number">5.2.</span> <span class="nav-text">Add Categories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Templates"><span class="nav-number">5.3.</span> <span class="nav-text">Change Templates</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Push-All-Files-on-GitHub"><span class="nav-number">5.4.</span> <span class="nav-text">Push All Files on GitHub</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
@@ -783,7 +813,21 @@
   <span class="author" itemprop="copyrightHolder">GoldenaArcher</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="Symbols count total">17k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="Reading time total">15 mins.</span>
   
 </div>
 
@@ -817,6 +861,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
