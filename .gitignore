@@ -6,5 +6,5 @@ node_modules/
 public/
 .deploy*/
 # Since password is here, so they have to be ignored
-/_config.yml
+_config.yml
 /themes/next/_config.yml
