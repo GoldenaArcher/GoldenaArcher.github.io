@@ -317,9 +317,13 @@ git commit -m "commit"  # commit all changes
 git push origin hexo   # push all changes to branch hexo
 ```
 
+---
 
+# Free Image Bed
 
+[imgur](<https://imgur.com/>) is good, but not applicable in China.
 
+[SM.MS](<https://sm.ms/>) is also good, my problem with SM.MS is that you can't register and get the url again.
 
 ---
 
