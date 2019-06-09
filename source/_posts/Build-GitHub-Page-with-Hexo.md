@@ -1,9 +1,11 @@
 ---
 title: Build GitHub Page with Hexo
 date: 2019-06-07 00:16:39
-tags: [Hexo, GitHub]
+tags: [Hexo, GitHub, NexT]
 categories: [Hexo]
 ---
+
+<img src="https://i.loli.net/2019/06/09/5cfcda7baeae136243.png" width=800>
 
 I have set up io site for GitHub for a while, have not really play with the Git page anyway. However, since I started to study more and more, I feel like to have some place supports Markdown so that I can organize my notes is important. Eventually, my previously set Git page came to my mind.
 
@@ -309,12 +311,13 @@ With the default deploy, Hexo only push files under `public` to GitHub. However,
 
 ```
 # make sure it's at the root
-git init
-git remote add origin site's_source_on_git   # add the repo to origin
-git checkout -b hexo   		 # create a new branch
-git add . 			 # add all the changes
-git commit -m "commit"  # commit all changes
-git push origin hexo   # push all changes to branch hexo
+$ git init
+$ git remote add origin site's_source_on_git   # add the repo to origin
+$ git checkout -b hexo   		 # create a new branch
+$ git push --set-upstream origin hexo	# set upstream, later just use git push is fine
+$ git add . 			 # add all the changes
+$ git commit -m "commit"  # commit all changes
+$ git push origin hexo   # push all changes to branch hexo, or use git push
 ```
 
 ---
