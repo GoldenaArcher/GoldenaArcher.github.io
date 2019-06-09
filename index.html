@@ -368,12 +368,24 @@
                 
               
 
-              <time title="Created: 2019-06-09 22:45:34 / Modified: 22:50:23" itemprop="dateCreated datePublished" datetime="2019-06-09T22:45:34+08:00">2019-06-09</time>
+              <time title="Created: 2019-06-09 22:45:34" itemprop="dateCreated datePublished" datetime="2019-06-09T22:45:34+08:00">2019-06-09</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-10 00:12:40" itemprop="dateModified" datetime="2019-06-10T00:12:40+08:00">2019-06-10</time>
               
             
           </span>
@@ -405,17 +417,6 @@
 
           
           
-            <span id="/2019/06/09/Git-Bash-Issues/" class="leancloud_visitors" data-flag-title="Git Bash Issues">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
 
           
 
@@ -430,7 +431,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">397</span>
+                <span title="Symbols count in article">399</span>
               
 
               
@@ -465,17 +466,16 @@
 
       
         
+          <p>Just some problems that I have encountered, and how to resolve these issues.</p>
+          <!--noindex-->
           
-            <p>Just some problems that I have encountered, and how to resolve these issues.</p>
-<hr>
-<h1 id="Could-not-resolve-hostname"><a href="#Could-not-resolve-hostname" class="headerlink" title="Could not resolve hostname"></a>Could not resolve hostname</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br><span class="line">ssh: Could not resolve hostname github.com: Name or service not known</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
-
-<p>I found this solution from <a href="https://stackoverflow.com/questions/9393409/ssh-could-not-resolve-hostname-github-com-name-or-service-not-known-fatal-th" target="_blank" rel="noopener">this problem</a> perfectly solves this issue:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
-
-<hr>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/06/09/Git-Bash-Issues/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
@@ -611,17 +611,6 @@
           
 
           
-          
-            <span id="/2019/06/09/NexT-Upgrade/" class="leancloud_visitors" data-flag-title="NexT Upgrade">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
           
 
           
@@ -832,17 +821,6 @@
 
           
           
-            <span id="/2019/06/07/Markdown-Study-Guide/" class="leancloud_visitors" data-flag-title="Markdown Study Guide">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
 
           
 
@@ -1052,17 +1030,6 @@
 
           
           
-            <span id="/2019/06/07/Build-GitHub-Page-with-Hexo/" class="leancloud_visitors" data-flag-title="Build GitHub Page with Hexo">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
 
           
 
@@ -1238,17 +1205,6 @@
           
 
           
-          
-            <span id="/2019/06/05/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
           
 
           
@@ -1699,74 +1655,6 @@
 
 
   
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'k1PeJygbJj4Ucb9bp9Mqbzil-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'k1PeJygbJj4Ucb9bp9Mqbzil-gzGzoHsz',
-                'X-LC-Key': 'XuyUa3Vxte9p98l5kI7bXuQJ',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
-          
-        });
-    });
-  </script>
-
-
 
   
 
