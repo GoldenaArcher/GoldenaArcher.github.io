@@ -80,3 +80,12 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/GoldenaArcher/GoldenaArcher.github.io
+
+# Symbol Counttime
+## Docs: https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false

@@ -303,6 +303,26 @@ Which saves some time from typing `categories:` all the time.
 
 ---
 
+## Push All Files on GitHub
+
+With the default deploy, Hexo only push files under `public` to GitHub. However, when working with different computers, there will be issues. Checking out another branch to keep all the files can save the trouble:
+
+```
+# make sure it's at the root
+git init
+git remote add origin site's_source_on_git   # add the repo to origin
+git checkout -b hexo   		 # create a new branch
+git add . 			 # add all the changes
+git commit -m "commit"  # commit all changes
+git push origin hexo   # push all changes to branch hexo
+```
+
+
+
+
+
+---
+
 # Reference
 
 [How to use Hexo and deploy to GitHub Pages](<https://gist.github.com/btfak/18938572f5df000ebe06fbd1872e4e39#2-create-a-project-for-your-github-pages>)
