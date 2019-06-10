@@ -7,4 +7,5 @@ public/
 .deploy*/
 # Since password is here, so they have to be ignored
 _config.yml
+_config/
 /themes/next/_config.yml

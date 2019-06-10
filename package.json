@@ -19,5 +19,8 @@
     "hexo-server": "^0.3.3",
     "hexo-symbols-count-time": "^0.6.0",
     "hexo-wordcount": "^6.0.1"
+  },
+  "scripts": {
+    "d": "hexo clean && hexo g && hexo d"
   }
 }

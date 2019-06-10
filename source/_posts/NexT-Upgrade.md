@@ -136,3 +136,40 @@ footer:
 
 ---
 
+# View #
+
+Doesn't want to translate since I'm not sure how I did it... but the [instruction](<https://github.com/theme-next/hexo-theme-next/blob/master/docs/LEANCLOUD-COUNTER-SECURITY.md>) is very clear and can be easily to set up for free.
+
+---
+
+# Visitors
+
+Just set `busuanzi` function to true:
+
+```
+# Show Views / Visitors of the website / page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi
+busuanzi_count:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: user
+  total_views: true
+  total_views_icon: eye
+  post_views: true
+  post_views_icon: eye
+```
+
+---
+
+# Trim Command
+
+Use short `npm` command to run instead of `hexo clean && hexo g && hexo d`. Add following script to `package.json`:
+
+```
+,
+  "scripts": {
+    "d": "hexo clean && hexo g && hexo d"
+  }
+```
+
+Now, the long command can be replaced with `npm run d`
