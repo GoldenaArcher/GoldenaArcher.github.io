@@ -1,9 +1,13 @@
 ---
-title: Git Bash Issues
+title: Git Problems
 date: 2019-06-09 22:45:34
 tags: [GitHub, Git bash]
-categories: [GitHub]
+categories: 
+- GitHub
+- Git bash
 ---
+
+<img src="https://i.loli.net/2019/06/10/5cfe18eeb498326927.png" width=800>
 
 Just some problems that I have encountered, and how to resolve these issues.
 

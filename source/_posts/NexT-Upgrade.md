@@ -2,7 +2,9 @@
 title: NexT Upgrade
 date: 2019-06-09 17:42:43
 tags: [Hexo, NexT, GitHub]
-categories: Hext/Next
+categories: 
+- Hexo
+- NexT
 ---
 
 <img src="https://i.loli.net/2019/06/09/5cfcda11a511617155.jpg" width=400>
@@ -161,15 +163,3 @@ busuanzi_count:
 
 ---
 
-# Trim Command
-
-Use short `npm` command to run instead of `hexo clean && hexo g && hexo d`. Add following script to `package.json`:
-
-```
-,
-  "scripts": {
-    "d": "hexo clean && hexo g && hexo d"
-  }
-```
-
-Now, the long command can be replaced with `npm run d`

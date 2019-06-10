@@ -1,7 +1,9 @@
 ---
 title: Markdown Study Guide
 date: 2019-06-07 01:10:01
-categories: [GitHub/Markdown]
+categories: 
+- GitHub
+- Markdown
 tags: [Markdown, GitHub]
 ---
 <img src="https://i.loli.net/2019/06/09/5cfcb6625228618408.png" width=400>
