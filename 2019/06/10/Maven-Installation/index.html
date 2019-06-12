@@ -105,7 +105,7 @@
 <meta property="og:description" content="Before this point, I always use IDE to run Maven projects. However, today when I typed mvn clean, and the error message popped up: 12&apos;mvn&apos; is not recognized as an internal or external command,operab">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2019/06/10/5cfe194f2050360074.png">
-<meta property="og:updated_time" content="2019-06-10T08:52:57.332Z">
+<meta property="og:updated_time" content="2019-06-12T07:56:24.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Maven Installation">
 <meta name="twitter:description" content="Before this point, I always use IDE to run Maven projects. However, today when I typed mvn clean, and the error message popped up: 12&apos;mvn&apos; is not recognized as an internal or external command,operab">
@@ -386,12 +386,24 @@
                 
               
 
-              <time title="Created: 2019-06-10 12:28:15 / Modified: 16:52:57" itemprop="dateCreated datePublished" datetime="2019-06-10T12:28:15+08:00">2019-06-10</time>
+              <time title="Created: 2019-06-10 12:28:15" itemprop="dateCreated datePublished" datetime="2019-06-10T12:28:15+08:00">2019-06-10</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-12 15:56:24" itemprop="dateModified" datetime="2019-06-12T15:56:24+08:00">2019-06-12</time>
               
             
           </span>
@@ -444,7 +456,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">322</span>
+                <span title="Symbols count in article">2.9k</span>
               
 
               
@@ -458,7 +470,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">1 mins.</span>
+                <span title="Reading time">3 mins.</span>
               
             </div>
           
@@ -485,7 +497,45 @@
 
 <p>I realized that I did not install Maven on my local machine… Shame on me…</p>
 <p>Again, I used Windows.</p>
+<p><del>Almost forgot this post…</del></p>
 <a id="more"></a>
+
+<p>In this post, assuming that JDK has been configured properly.</p>
+<h1 id="Download-Maven"><a href="#Download-Maven" class="headerlink" title="Download Maven"></a>Download Maven</h1><ol>
+<li>As for now, the most current version is 3.6.1, so go to <a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">the official website</a> download <code>apache-maven-3.6.1-bin.zip</code> file.</li>
+<li>Unzip the file, and place somewhere that is easily remembered or organized.</li>
+</ol>
+<p>Surprisingly, installation of Maven is not required. </p>
+<hr>
+<h1 id="Add-Variables"><a href="#Add-Variables" class="headerlink" title="Add Variables"></a>Add Variables</h1><ol>
+<li>Search <code>environment</code> in the windows search bar, and open <code>Edit the system environment variables</code>.    </li>
+<li>Click on the <code>Environment Variables</code>.</li>
+<li>Select <code>System variables</code>, add click on <code>New...</code>. Set <code>MAVEN_HOME</code> for <code>Variable name:</code>, and past the path from step 1.2 to <code>Variable value:</code>.</li>
+<li>Select <code>Path</code> under <code>System variable</code>, then, click <code>New</code>. Finally, add <code>%MAVEN_HOME%\bin</code> to <code>Path</code>.</li>
+</ol>
+<hr>
+<h1 id="Check-Maven"><a href="#Check-Maven" class="headerlink" title="Check Maven"></a>Check Maven</h1><ol>
+<li><p>Open new prompt, and check following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ echo %MAVEN_HOME%</span><br><span class="line">C:\apache-maven-3.6.1</span><br></pre></td></tr></table></figure>
+
+<p>If no message has prompted, or just prints out <code>%MAVEN_HOME%</code>, which means <code>MAVEN_HOME</code> has not ye been configured, go back to 2.2.</p>
+</li>
+<li><p>Open new prompt, and check following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ mvn -v</span><br><span class="line">Apache Maven 3.6.1 (d66c9c0b3152b2e69ee9bac180bb8fcc8e6af555; 2019-04-05T03:00:29+08:00)</span><br><span class="line">Maven home: C:\apache-maven-3.6.1\bin\..         </span><br><span class="line">Java version: 11, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11   </span><br><span class="line">Default locale: en_US, platform encoding: GBK                                         </span><br><span class="line">OS name: &quot;windows 10&quot;, version: &quot;10.0&quot;, arch: &quot;amd64&quot;, family: &quot;windows&quot;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<hr>
+<h1 id="Something-Else"><a href="#Something-Else" class="headerlink" title="Something Else"></a>Something Else</h1><p>What is an <code>environment variable</code> in windows?</p>
+<p>Simply, it is a variable for the environment. To be more specific, it’s a easily remembered variable which points to the actual location of the environment.</p>
+<p>In this case, the name for <strong>the environment variable</strong> is <code>MAVEN_HOME</code>, and the specific path for the environment is <code>C:\apache-maven-3.6.1</code>. </p>
+<p>The <code>PATH</code>, which is also an environment variable but used to store all other environment variables. When other programs, for instance, in the process 3.2, typing <code>mvn -v</code> in prompt, or earlier as I said I entered <code>mvn clean</code> in Intellij, they start searching the specific variables that stored in the <code>PATH</code>, if not found, the error message will appear on the scree.</p>
+<p>Hence, point the executable in the <code>PASH</code> is important and the final steps in setting up environments for windows, and potentially any Unix-based systems, since wikipedia says:</p>
+<blockquote class="blockquote-center"><p>PATH is an environment variable on Unix-like operating systems, DOS, OS/2, and Microsoft Windows, specifying a set of directories where executable programs are located. In general, each executing process or user session has its own PATH setting.</p>
+<p><a href="https://en.wikipedia.org/wiki/PATH_(variable)" target="_blank" rel="noopener">wikipedia: PATH (variable)</a></p>
+</blockquote>
+
+
       
     </div>
 
@@ -580,8 +630,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -717,6 +776,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Download-Maven"><span class="nav-number">1.</span> <span class="nav-text">Download Maven</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Add-Variables"><span class="nav-number">2.</span> <span class="nav-text">Add Variables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Check-Maven"><span class="nav-number">3.</span> <span class="nav-text">Check Maven</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Something-Else"><span class="nav-number">4.</span> <span class="nav-text">Something Else</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -743,7 +819,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">27k</span>
+    <span title="Symbols count total">29k</span>
   
 
   
@@ -752,7 +828,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">24 mins.</span>
+    <span title="Reading time total">27 mins.</span>
   
 </div>
 
