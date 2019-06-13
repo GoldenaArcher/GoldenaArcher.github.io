@@ -72,7 +72,7 @@
     root: '/',
     scheme: 'Muse',
     version: '7.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":true,"dimmer":true},
     back2top: true,
     back2top_sidebar: false,
     fancybox: false,
@@ -299,6 +299,23 @@
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-link">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/link/" rel="section"><i class="menu-item-icon fa fa-fw fa-link"></i> <br>link</a>
+
+  </li>
 
       
       
@@ -468,7 +485,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">9.5k</span>
+                <span title="Symbols count in article">9.4k</span>
               
 
               
@@ -595,7 +612,7 @@ And this is the result that I saw:
 
 <p>Output:</p>
 <p><a href="https://www.amazon.com/" target="_blank" rel="noopener">https://www.amazon.com/</a></p>
-<p><a href="mailto:&#115;&#111;&#109;&#101;&#x40;&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#115;&#111;&#109;&#101;&#x40;&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p><a href="mailto:&#115;&#111;&#x6d;&#101;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#115;&#111;&#x6d;&#101;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <hr>
 <h3 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h3><p>The format for inline like is: <code>[text](https://abc.com &quot;Title&quot;)</code>, if <code>Title</code> is neglected, then there is no <code>Title</code> attributes for the link, which means when mouse is hovered over the text, there will be no title displayed for the link. </p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Google</span>](<span class="link">https://www.google.com/ "Google"</span>)</span><br><span class="line">[<span class="string">Google</span>](<span class="link">https://www.google.com/</span>)</span><br></pre></td></tr></table></figure>
@@ -997,7 +1014,7 @@ And this is the result that I saw:
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1026,7 +1043,9 @@ And this is the result that I saw:
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -1055,7 +1074,9 @@ And this is the result that I saw:
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1087,24 +1108,6 @@ And this is the result that I saw:
           
 
           
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://wvincen.gitee.io/" title="https://wvincen.gitee.io/" rel="noopener" target="_blank">Mr.Vincent</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://tianhualiang2019.github.io/" title="https://tianhualiang2019.github.io/" rel="noopener" target="_blank">Ray</a>
-                  </li>
-                
-              </ul>
-            </div>
           
 
           
@@ -1139,6 +1142,8 @@ And this is the result that I saw:
     </div>
   </aside>
   
+    <div id="sidebar-dimmer"></div>
+  
 
 
         
@@ -1159,7 +1164,7 @@ And this is the result that I saw:
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">29k</span>
+    <span title="Symbols count total">35k</span>
   
 
   
@@ -1168,7 +1173,7 @@ And this is the result that I saw:
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">27 mins.</span>
+    <span title="Reading time total">32 mins.</span>
   
 </div>
 
