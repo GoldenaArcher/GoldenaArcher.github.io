@@ -798,6 +798,10 @@
                     
                       
                     
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
@@ -814,6 +818,10 @@
                     
                   
                     
+                    
+                      
+                    
+                      
                     
                       
                     
@@ -980,12 +988,12 @@
 
 		var today = new Date()
 		var todayYear = today.getFullYear()
-		var todayMonth = today.getMonth()
+		var todayMonth = today.getMonth() + 1
 		var todayDate = today.getDate()
 		var todayHour = today.getHours()
 		var todayMinute = today.getMinutes()
 		var todaySecond = today.getSeconds()
-		var t1 = Date.UTC(2019,6,5,10,40,39)
+		var t1 = Date.UTC(2019,6,5,2,40,39)
 		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
 		var diff = t2-t1
 

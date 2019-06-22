@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">9.5k</span>
+                <span title="Symbols count in article">9.4k</span>
               
 
               
@@ -663,7 +663,7 @@ And this is the result that I saw:
 
 <p>Output:</p>
 <p><a href="https://www.amazon.com/" target="_blank" rel="noopener">https://www.amazon.com/</a></p>
-<p><a href="mailto:&#x73;&#x6f;&#109;&#101;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#x73;&#x6f;&#109;&#101;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p><a href="mailto:&#x73;&#111;&#109;&#101;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#x73;&#111;&#109;&#101;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a></p>
 <hr>
 <h3 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h3><p>The format for inline like is: <code>[text](https://abc.com &quot;Title&quot;)</code>, if <code>Title</code> is neglected, then there is no <code>Title</code> attributes for the link, which means when mouse is hovered over the text, there will be no title displayed for the link. </p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Google</span>](<span class="link">https://www.google.com/ "Google"</span>)</span><br><span class="line">[<span class="string">Google</span>](<span class="link">https://www.google.com/</span>)</span><br></pre></td></tr></table></figure>
@@ -1138,6 +1138,10 @@ And this is the result that I saw:
                     
                       
                     
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
@@ -1154,6 +1158,10 @@ And this is the result that I saw:
                     
                   
                     
+                    
+                      
+                    
+                      
                     
                       
                     
@@ -1320,12 +1328,12 @@ And this is the result that I saw:
 
 		var today = new Date()
 		var todayYear = today.getFullYear()
-		var todayMonth = today.getMonth()
+		var todayMonth = today.getMonth() + 1
 		var todayDate = today.getDate()
 		var todayHour = today.getHours()
 		var todayMinute = today.getMinutes()
 		var todaySecond = today.getSeconds()
-		var t1 = Date.UTC(2019,6,5,10,40,39)
+		var t1 = Date.UTC(2019,6,5,2,40,39)
 		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
 		var diff = t2-t1
 

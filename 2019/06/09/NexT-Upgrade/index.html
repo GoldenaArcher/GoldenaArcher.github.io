@@ -99,7 +99,7 @@
 
 
   <meta name="description" content="Technically, this article is not upgrading the NexT theme, rather, it’s exploring the already setup features of the theme.">
-<meta name="keywords" content="Hexo,NexT,GitHub">
+<meta name="keywords" content="NexT,Hexo,GitHub">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NexT Upgrade">
 <meta property="og:url" content="https://goldenaarcher.github.io/2019/06/09/NexT-Upgrade/index.html">
@@ -675,9 +675,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-          
             <a href="/tags/NexT/" rel="tag"># NexT</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
           
             <a href="/tags/GitHub/" rel="tag"># GitHub</a>
           
@@ -824,6 +824,10 @@
                     
                       
                     
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
@@ -840,6 +844,10 @@
                     
                   
                     
+                    
+                      
+                    
+                      
                     
                       
                     
@@ -1006,12 +1014,12 @@
 
 		var today = new Date()
 		var todayYear = today.getFullYear()
-		var todayMonth = today.getMonth()
+		var todayMonth = today.getMonth() + 1
 		var todayDate = today.getDate()
 		var todayHour = today.getHours()
 		var todayMinute = today.getMinutes()
 		var todaySecond = today.getSeconds()
-		var t1 = Date.UTC(2019,6,5,10,40,39)
+		var t1 = Date.UTC(2019,6,5,2,40,39)
 		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
 		var diff = t2-t1
 
