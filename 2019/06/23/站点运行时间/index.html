@@ -328,23 +328,6 @@
     <a href="/reading/" rel="section"><i class="menu-item-icon fa fa-fw fa-book-reader"></i> <br>reading</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
-
-  </li>
 
       
       
@@ -549,13 +532,10 @@
       
         <p>看到别人有在用<strong>本站已运行XX年YY月OO日</strong>，突然心血来潮很想加一下这个功能，所以就上网找了下……</p>
 <a id="more"></a>
-
 <h1 id="复制黏贴"><a href="#复制黏贴" class="headerlink" title="复制黏贴"></a>复制黏贴</h1><p>找到可以用的代码来自<a href="https://juejin.im/post/5a71ab9f518825735300ee6c#heading-28" target="_blank" rel="noopener">（Ⅱ）NexT主题的优化定制修改指南</a>，具体如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;sitetime&quot;&gt; &lt;br&gt;&lt;/span&gt;</span><br><span class="line">&lt;script language=&quot;javascript&quot;&gt;</span><br><span class="line">	function siteTime()&#123;</span><br><span class="line">		window.setTimeout(&quot;siteTime()&quot;, 1000);</span><br><span class="line">		var seconds = 1000</span><br><span class="line">		var minutes = seconds * 60</span><br><span class="line">		var hours = minutes * 60</span><br><span class="line">		var days = hours * 24</span><br><span class="line">		var years = days * 365</span><br><span class="line"></span><br><span class="line">		var today = new Date()</span><br><span class="line">		var todayYear = today.getFullYear()</span><br><span class="line">		var todayMonth = today.getMonth()</span><br><span class="line">		var todayDate = today.getDate()</span><br><span class="line">		var todayHour = today.getHours()</span><br><span class="line">		var todayMinute = today.getMinutes()</span><br><span class="line">		var todaySecond = today.getSeconds()</span><br><span class="line">		var t1 = Date.UTC(2019,6,5,10,40,39)</span><br><span class="line">		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)</span><br><span class="line">		var diff = t2-t1</span><br><span class="line"></span><br><span class="line">		var diffYears = Math.floor(diff/years)</span><br><span class="line">		var diffDays = Math.floor((diff/days)-diffYears*365)</span><br><span class="line">		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)</span><br><span class="line">		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)</span><br><span class="line">		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)</span><br><span class="line">		// document.getElementById(&quot;sitetime&quot;).innerHTML=&quot; 本站已运行&quot;+diffYears+&quot; 年 &quot;+diffDays+&quot; 天 &quot;+diffHours+&quot; 小时 &quot;+diffMinutes+&quot; 分钟 &quot;+diffSeconds+&quot; 秒&lt;br&gt;&quot;</span><br><span class="line">	&#125;</span><br><span class="line">	siteTime()</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
 <p>然而，却在具体运行的时候碰到如下尴尬的情况：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本站已运行-1 年 352 天 15 小时 1 分钟 5 秒</span><br></pre></td></tr></table></figure>
-
 <p>嗯……？</p>
 <p>这个运行时间……</p>
 <p>好像有点问题……？</p>
@@ -563,15 +543,13 @@
 <hr>
 <h1 id="开始修改"><a href="#开始修改" class="headerlink" title="开始修改"></a>开始修改</h1><h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><p>虽然不会写JS，不过大佬的代码简洁明了，看还是能够看懂的。不过对于<code>Date.UTC()</code>这个函数不是很了解，于是进行了一下搜索。这个函数具体如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var utcDate1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));</span><br><span class="line">var utcDate2 = new Date(Date.UTC(0, 0, 0, 0, 0, 0));</span><br><span class="line"></span><br><span class="line">console.log(utcDate1.toUTCString());</span><br><span class="line">// expected output: Fri, 02 Feb 1996 03:04:05 GMT</span><br><span class="line"></span><br><span class="line">console.log(utcDate2.toUTCString());</span><br><span class="line">// expected output: Sun, 31 Dec 1899 00:00:00 GMT</span><br><span class="line"></span><br><span class="line">SyntaxSection</span><br><span class="line">ECMAScript 2017 and later:</span><br><span class="line"></span><br><span class="line">Date.UTC(year[, month[, day[, hour[, minute[, second[, millisecond]]]]]])</span><br><span class="line">ECMAScript 2016 and earlier: (month used to be required)</span><br><span class="line"></span><br><span class="line">Date.UTC(year, month[, day[, hour[, minute[, second[, millisecond]]]]])</span><br></pre></td></tr></table></figure>
-
 <p>所以说，具体传的参数就按照<strong>年-月-日-时-分-秒-毫秒</strong>这样算的，那么这么看起来……好像上面的代码也没有什么问题。</p>
-<p><code>t1</code>是创建站点的时间，<code>t2</code>则是将参数代入到<code>Date.UTC()</code>之中获取当前的时间。没有用<code>toUTCString()</code>的话，<code>t1</code>和<code>t2</code>是会计算分别计算，以毫秒为单位，从_给的时间点<em>和</em>现在时间点_到1899年12月31号凌晨12点的时间差。</p>
+<p><code>t1</code>是创建站点的时间，<code>t2</code>则是将参数代入到<code>Date.UTC()</code>之中获取当前的时间。没有用<code>toUTCString()</code>的话，<code>t1</code>和<code>t2</code>是会计算分别计算，以毫秒为单位，从_给的时间点_和_现在时间点_到1899年12月31号凌晨12点的时间差。</p>
 <p>这么看起来，逻辑毫无问题，那么是哪里出错了……</p>
 <hr>
 <h2 id="Debug阶段"><a href="#Debug阶段" class="headerlink" title="Debug阶段"></a>Debug阶段</h2><p>因为对javascript的debug非常生疏，而且也不知道在Hexo里面调用是什么样子的，<del>下个目标就这么定下了，好好学习前端的debug方法</del>，所以就使用了老方法——<code>document.write()</code>。</p>
 <p>随意从网上找个在线JS的编辑器，将下面代码敲了进去:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var today = new Date()</span><br><span class="line">var todayYear = today.getFullYear()</span><br><span class="line">var todayMonth = today.getMonth()</span><br><span class="line">var todayDate = today.getDate()</span><br><span class="line">var todayHour = today.getHours()</span><br><span class="line">var todayMinute = today.getMinutes()</span><br><span class="line">var todaySecond = today.getSeconds()</span><br><span class="line">var t1 = Date.UTC(2019,6,5,2,40,39)</span><br><span class="line">var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)</span><br><span class="line"></span><br><span class="line">document.write(t1)</span><br><span class="line">document.write(&apos;&lt;br&gt;&apos;)</span><br><span class="line"></span><br><span class="line">document.write(t2)</span><br><span class="line">document.write(&apos;&lt;br&gt;&apos;)</span><br><span class="line">var diff = t2-t1</span><br><span class="line">document.write(diff)</span><br></pre></td></tr></table></figure>
-
 <p>得到如下结果：</p>
 <blockquote>
 <p>1562294439000<br>1561256481000<br>-1037958000</p>
@@ -666,6 +644,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/06/23/Inserction-Sort/" rel="prev" title="Insertion Sort">
+                Insertion Sort <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -739,7 +721,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -788,7 +770,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -849,7 +831,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -947,7 +931,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">47k</span>
+    <span title="Symbols count total">50k</span>
   
 
   
@@ -956,7 +940,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">42 mins.</span>
+    <span title="Reading time total">46 mins.</span>
   
 </div>
 
@@ -1191,6 +1175,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 

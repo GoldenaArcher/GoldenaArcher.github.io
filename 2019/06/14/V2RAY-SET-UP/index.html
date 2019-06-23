@@ -334,23 +334,6 @@
     <a href="/reading/" rel="section"><i class="menu-item-icon fa fa-fw fa-book-reader"></i> <br>reading</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
-
-  </li>
 
       
       
@@ -553,22 +536,18 @@
       
 
       
-        <img src="https://i.loli.net/2019/06/14/5d028693c02be68932.jpg">
-
+        <p><img src="https://i.loli.net/2019/06/14/5d028693c02be68932.jpg"></p>
 <p>Recently, <strong>the Great Wall</strong> has been built higher, like the US-Mexico border, so, I have to figure a way out…</p>
 <a id="more"></a>
-
 <p>Since V2Ray has claimed to be more secure and powerful, I decided to configure it on my VPS so that I can crawl out of the wall.</p>
 <p>The VPS service I used is DigitalOcean, and there is a <a href="https://m.do.co/c/3b9697223dae" target="_blank" rel="noopener">$50 credits for 30 days</a> link for you to try it out.</p>
 <p>The system I am using for VM is Ubuntu 18.04. I think these commands also support Debian 7+ and CentOS 7+.</p>
 <hr>
 <h1 id="Set-Up-Virtual-Machine"><a href="#Set-Up-Virtual-Machine" class="headerlink" title="Set Up Virtual Machine"></a>Set Up Virtual Machine</h1><h2 id="Create-a-Droplets"><a href="#Create-a-Droplets" class="headerlink" title="Create a Droplets"></a>Create a Droplets</h2><p>As far as I’m using this service, the process has been fairly easy. Click on the top right, and select Create -&gt; Droplets as shown:</p>
-<img src="https://i.loli.net/2019/06/14/5d0276eeda97a79260.png" width="500">
-
+<p><img src="https://i.loli.net/2019/06/14/5d0276eeda97a79260.png" width="500"></p>
 <p>Then, you will see the set up page for the droplet, which allows user to modify different settings visually. The <strong>Distributions</strong> I selected is <strong>Ubuntu 18.04 x 64</strong>, and the plan I chose is the cheapest one -&gt; $5 per months one.</p>
-<p>I just left the rest of setting as it be, besides the <strong>Select additional options</strong>. In that section, I select <strong><em>IPv6</em></strong>, as it allows data to be transferred on the Internet:</p>
-<img src="https://i.loli.net/2019/06/14/5d0278f99409747454.png" width="600">
-
+<p>I just left the rest of setting as it be, besides the <strong>Select additional options</strong>. In that section, I select <strong>_IPv6_</strong>, as it allows data to be transferred on the Internet:</p>
+<p><img src="https://i.loli.net/2019/06/14/5d0278f99409747454.png" width="600"></p>
 <p>I do not have any preference toward a pacific region on the list. With the current situation, I’d recommend you to ping the given IP address after the droplet has been created. If the connection is not lost, which means this address survived. Otherwise, just delete this droplet, and create a new one.</p>
 <p>After making sure the current IP address works, it’s time for next step.</p>
 <hr>
@@ -576,33 +555,25 @@
 <p>Log in to the VM via tools.  I used PuTTy, but anything that can connect to VM works. First time log in to the account, the machine requires you to reset the password. After resetting the password, it’s time for real configuration.</p>
 <p>Simply just following these processes is fine:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># install curl</span><br><span class="line">$ apt-get update -y &amp;&amp; apt-get install curl -y</span><br><span class="line"># run v2ray script</span><br><span class="line">$ bash &lt;(curl -L -s https://install.direct/go.sh)</span><br><span class="line"># I like to check if the config file for v2ray actually exists and looks properly</span><br><span class="line">$ cat /etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
-
 <p>If the file looks like something below, then everything at this point woks properly.</p>
 <blockquote>
-<p>{
- “inbounds”: [{
-   “port”: #####,<br>   “protocol”: “vmess”,<br>   “settings”: {<br>     “clients”: [<br>       {<br>         “id”: “some uuid”,<br>         “level”: 1,<br>         “alterId”: 64<br>       }<br>     ]<br>   }<br> }],<br> “outbounds”: [{
-   “protocol”: “freedom”,<br>   “settings”: {}<br> },{<br>   “protocol”: “blackhole”,<br>   “settings”: {},<br>   “tag”: “blocked”<br> }],<br> “routing”: {<br>   “rules”: [<br>     {<br>       “type”: “field”,<br>       “ip”: [“geoip:private”],<br>       “outboundTag”: “blocked”<br>     }<br>   ]<br> }<br>}</p>
+<p>{<br> “inbounds”: [{<br>   “port”: #####,<br>   “protocol”: “vmess”,<br>   “settings”: {<br>     “clients”: [<br>       {<br>         “id”: “some uuid”,<br>         “level”: 1,<br>         “alterId”: 64<br>       }<br>     ]<br>   }<br> }],<br> “outbounds”: [{<br>   “protocol”: “freedom”,<br>   “settings”: {}<br> },{<br>   “protocol”: “blackhole”,<br>   “settings”: {},<br>   “tag”: “blocked”<br> }],<br> “routing”: {<br>   “rules”: [<br>     {<br>       “type”: “field”,<br>       “ip”: [“geoip:private”],<br>       “outboundTag”: “blocked”<br>     }<br>   ]<br> }<br>}</p>
 </blockquote>
 <p>port, id, and alterId can be changed. I believe id is in the format of uuid, unless you find some generator, don’t mess with it.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># the script suppose to start the service, but just in case</span><br><span class="line">$ service v2ray start</span><br><span class="line"># check if the vps port is accessible</span><br><span class="line">$ firewall-cmd --zone=public --list-ports</span><br><span class="line"># if firewall is installed, then it&apos;ll list the port, otherwise, install it first</span><br><span class="line">$ apt install firewalld</span><br><span class="line">$ systemctl start firewalld 	# start the service</span><br><span class="line"># then check the port again</span><br><span class="line">$ firewall-cmd --zone=public --list-ports</span><br><span class="line"># if the port is not accessible</span><br><span class="line">$ firewall-cmd --zone=public --add-port=&apos;port_in_config.json_here&apos;/tcp --permanent</span><br><span class="line">$ firewall-cmd --reload	# reload service</span><br><span class="line">$ firewall-cmd --zone=public --list-ports	# the port should be accessible</span><br></pre></td></tr></table></figure>
-
 <p>All other set up tutorials stop here, and says that after this step, the V2Ray is all good and ready to connect. </p>
 <p>However, I found it to not be true. I tried it several times, and wasn’t able to connect. Just when I thought that V2Ray has already been detected, I finally found the solution.</p>
 <hr>
 <h2 id="Last-Step-Configuration"><a href="#Last-Step-Configuration" class="headerlink" title="Last Step Configuration"></a>Last Step Configuration</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">$ netstat -apn | grep v2ray</span><br><span class="line">tcp6       0      0 :::xxxxx                :::*                    LISTEN      XXXX/v2ray</span><br><span class="line">unix  3      [ ]         STREAM     CONNECTED     788043   22194/v2ray</span><br><span class="line"># v2ray is not listening properly, it&apos;s not getting the proper ip address. Add the ip address forceing v2ray to listen</span><br><span class="line">$ nano /etc/v2ray/conf.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;inbounds&quot;: [&#123;</span><br><span class="line">    &quot;port&quot;: #####,</span><br><span class="line">    &quot;protocol&quot;: &quot;vmess&quot;,</span><br><span class="line">    &quot;listen&quot;:&quot;add.your.port.here&quot;</span><br><span class="line">    &quot;settings&quot;: &#123;</span><br><span class="line">      &quot;clients&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">          &quot;id&quot;: &quot;some uuid&quot;,</span><br><span class="line">          &quot;level&quot;: 1,</span><br><span class="line">          &quot;alterId&quot;: 64</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;],</span><br><span class="line">  &quot;outbounds&quot;: [&#123;</span><br><span class="line">    &quot;protocol&quot;: &quot;freedom&quot;,</span><br><span class="line">    &quot;settings&quot;: &#123;&#125;</span><br><span class="line">  &#125;,&#123;</span><br><span class="line">    &quot;protocol&quot;: &quot;blackhole&quot;,</span><br><span class="line">    &quot;settings&quot;: &#123;&#125;,</span><br><span class="line">    &quot;tag&quot;: &quot;blocked&quot;</span><br><span class="line">  &#125;],</span><br><span class="line">  &quot;routing&quot;: &#123;</span><br><span class="line">    &quot;rules&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;field&quot;,</span><br><span class="line">        &quot;ip&quot;: [&quot;geoip:private&quot;],</span><br><span class="line">        &quot;outboundTag&quot;: &quot;blocked&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"># restart the service</span><br><span class="line">$ systemctl restart v2ray</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="Set-Up-V2Ray-Server"><a href="#Set-Up-V2Ray-Server" class="headerlink" title="Set Up V2Ray Server"></a>Set Up V2Ray Server</h1><p>Again, I use windows.</p>
 <h2 id="Download-Necessary-Files"><a href="#Download-Necessary-Files" class="headerlink" title="Download Necessary Files"></a>Download Necessary Files</h2><p><a href="https://github.com/2dust/v2rayN/releases" target="_blank" rel="noopener">v2rayN</a> and <a href="https://github.com/v2ray/v2ray-core/releases" target="_blank" rel="noopener">v2ray-core</a>, both of them are on the GitHub.</p>
 <p>Once download completes, add <code>v2rayN.exe</code> into 2nd folder, which I believe is <code>v2ray-windows-64.zip</code>. </p>
 <hr>
 <h2 id="Configure-V2RayN"><a href="#Configure-V2RayN" class="headerlink" title="Configure V2RayN"></a>Configure V2RayN</h2><p>Click on V2RayN, and click <code>add [VMess] server</code>  under servers as below</p>
-<img src="https://i.loli.net/2019/06/14/5d02847b8426763962.png">
-
+<p><img src="https://i.loli.net/2019/06/14/5d02847b8426763962.png"></p>
 <p>Then, enter the information in <code>/etc/v2ray/conf.json</code>, mainly is the IP address of the VM, port set by V2Ray script, UUID generated during the process, and the AlterId which by default is 64.</p>
-<img src="https://i.loli.net/2019/06/14/5d0284e6b42f134666.png">
-
+<p><img src="https://i.loli.net/2019/06/14/5d0284e6b42f134666.png"></p>
 <hr>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.vpndada.com/v2ray-tutorial-cn/" target="_blank" rel="noopener">V2Ray教程：V2Ray服务器搭建、V2Ray软件下载和配置</a></p>
 <p><a href="https://www.4spaces.org/digitalocean-build-v2ray-0-1/" target="_blank" rel="noopener"><a href="https://www.4spaces.org/digitalocean-build-v2ray-0-1/" target="_blank" rel="noopener">从零开始：史上最详尽V2Ray搭建图文教程</a></a></p>
@@ -760,7 +731,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -809,7 +780,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -870,7 +841,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -968,7 +941,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">47k</span>
+    <span title="Symbols count total">50k</span>
   
 
   
@@ -977,7 +950,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">42 mins.</span>
+    <span title="Reading time total">46 mins.</span>
   
 </div>
 
@@ -1212,6 +1185,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 

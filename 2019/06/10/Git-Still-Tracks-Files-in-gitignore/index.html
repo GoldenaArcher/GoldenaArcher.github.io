@@ -330,23 +330,6 @@
     <a href="/reading/" rel="section"><i class="menu-item-icon fa fa-fw fa-book-reader"></i> <br>reading</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
-
-  </li>
 
       
       
@@ -565,13 +548,11 @@
       
 
       
-        <img src="https://i.loli.net/2019/06/10/5cfe784215d4c44471.png" width="500">
-
+        <p><img src="https://i.loli.net/2019/06/10/5cfe784215d4c44471.png" width="500"></p>
 <p>Once upon a time, when I was using Intellij IDEA for one of my school project, I found all the configuration files of  Intellij are very annoying. I added all the files into the <code>.gitignore</code>, and hope those files wouldn’t be uploaded anymore. Yet… They were still uploading and updating which drove me crazy. I didn’t know what’re the problems, and I was so occupied by other works. I decided to let it be.</p>
 <p>However, now, I’m facing the same issue when I add <code>Views</code> to the project, and I have to remove all the <code>_config.yml</code> files from git branch. Though my project is not worthy to crack, I’m not comfortable to let my password flow around on the internet.</p>
 <p>SO, they have to be <strong>REMOVED</strong>!</p>
 <a id="more"></a>
-
 <h1 id="The-Causes"><a href="#The-Causes" class="headerlink" title="The Causes"></a>The Causes</h1><p>First of all steps is always to search on the Google for any similar problems, and whether answers have already been provided.</p>
 <p>Not surprise, many people have encountered same issues, and solutions have been provided. <a href="https://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore" target="_blank" rel="noopener">How to make Git “forget” about a file that was tracked but is now in .gitignore?</a> and <a href="https://stackoverflow.com/questions/42441522/gitignore-still-tracking-files-even-if-i-tried-to-ignore-them-why" target="_blank" rel="noopener">.gitignore still tracking files even if I tried to ignore them, why?</a> have explained it very well.</p>
 <p>To be more specific, the reasons that <code>.gitignore</code> is not ignoring listed files are:</p>
@@ -589,12 +570,10 @@
 <p>On the other hand, if the files have been commit locally or pushed remotely, then, a commit is necessary to save the changes.</p>
 <p>So, the code is:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># &lt;file&gt; can be a file or a location</span><br><span class="line">$ git rm --cached &lt;file&gt;</span><br><span class="line"># just in case, commit the changes</span><br><span class="line">$ git commit -m &quot;remove cached files&quot;</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h2 id="Furthermore…"><a href="#Furthermore…" class="headerlink" title="Furthermore…"></a>Furthermore…</h2><p>In my case, I did not know that <code>.gitignore</code> is not working properly, and save <code>app_id</code> in the <code>_config.yml</code> file already. <code>git rm --cached</code> only removes files from caches locally, but will not change the files have already been pushed to remote repository.</p>
 <p>Since I realized the problem early on, I decided to rebase the current branch to previous state, and everything is all good:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># rebase to previous stage since it&apos;s my last commit</span><br><span class="line">$ git rebase -i HEAD~2</span><br><span class="line"># force push</span><br><span class="line">$ git push --force</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>The <code>git rm --cached</code> command does not remove files from all the commits, therefore only works when files that have not yet been committed, or the files have been committed are not important.</p>
 <p>It is always a good habit to add all the files in <code>.gitignore</code>beforehead, rather than trying to make up later.</p>
@@ -750,7 +729,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -799,7 +778,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -860,7 +839,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -958,7 +939,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">47k</span>
+    <span title="Symbols count total">50k</span>
   
 
   
@@ -967,7 +948,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">42 mins.</span>
+    <span title="Reading time total">46 mins.</span>
   
 </div>
 
@@ -1202,6 +1183,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 

@@ -328,23 +328,6 @@
     <a href="/reading/" rel="section"><i class="menu-item-icon fa fa-fw fa-book-reader"></i> <br>reading</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
-
-  </li>
 
       
       
@@ -542,7 +525,6 @@
       
         <p>具体的顺序已经记不太清楚了，只记得部分的问题和大概的回答过程了，总共是一个多小时这个样子，也没全都记得了。</p>
 <a id="more"></a>
-
 <h1 id="记得的问题和回答"><a href="#记得的问题和回答" class="headerlink" title="记得的问题和回答"></a>记得的问题和回答</h1><ol>
 <li><p>八大基本数据类型</p>
 <p>byte, short, int, long, char, boolean, float, double</p>
@@ -577,12 +559,10 @@
 <p>==是直接判断，如果是基本数据类型的话，数据类型的数，如果不是基本数据类型的话，则是判断对象的地址；对于equals来说，则是根据它已经写好的的equals的函数去对两个对象进行比较。</p>
 <p>或许表述的时候面试官有些不太清楚，面试官直接写了代码提问：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String a = &quot;a&quot;;</span><br><span class="line">String b = new String(&quot;a&quot;);</span><br></pre></td></tr></table></figure>
-
 <p>那么这两个用equals和==会一样吗？</p>
 <p>答：用==不一样，因为a的话是在一个常量池中新建了一个“a“,但是对于b来说，它强迫性的建了一个新的对象，所以ab地址不同，用==的话就会不一样。但是用equals，因为双方都是a，所以是一样的。</p>
 <p>面试官追问：知道常量池嘛……那再问你……下面这个ac一样吗：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a = &quot;a&quot;;</span><br><span class="line">String b = new String(&quot;a&quot;);</span><br><span class="line">String c = &quot;a&quot;;</span><br></pre></td></tr></table></figure>
-
 <p>答：一样，因为对于c来说直接在从常量池中拉下来的a，所以ac之间的地址相等。</p>
 <hr>
 </li>
@@ -604,7 +584,6 @@
 </li>
 <li><p>斐波那契数列知道吧，写一下伪代码吧</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public int fib(int n) &#123;</span><br><span class="line">    if (n == 0 || n == 1)	return 1;</span><br><span class="line">    return fib(n-2) + fib(n-1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>很经典的面试题了，就是讲一下用recursion（递归）做，将问题一步步化简到最之前的，也就是当n=1的时候，随后再一步一步加回来。</p>
 <hr>
 </li>
@@ -793,7 +772,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -842,7 +821,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -903,7 +882,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1001,7 +982,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">47k</span>
+    <span title="Symbols count total">50k</span>
   
 
   
@@ -1010,7 +991,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">42 mins.</span>
+    <span title="Reading time total">46 mins.</span>
   
 </div>
 
@@ -1245,6 +1226,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 

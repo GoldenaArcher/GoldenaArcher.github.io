@@ -107,7 +107,7 @@
 <meta property="og:description" content="In the NexT Upgrade, I list some upgrades can be done to create a better looking and more powerful site. During the process of digging, I also found some features or issues that’s not related to the">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2019/06/10/5cfe16d677f5b30473.png">
-<meta property="og:updated_time" content="2019-06-10T08:44:56.594Z">
+<meta property="og:updated_time" content="2019-06-23T05:14:06.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Upgrade">
 <meta name="twitter:description" content="In the NexT Upgrade, I list some upgrades can be done to create a better looking and more powerful site. During the process of digging, I also found some features or issues that’s not related to the">
@@ -330,23 +330,6 @@
     <a href="/reading/" rel="section"><i class="menu-item-icon fa fa-fw fa-book-reader"></i> <br>reading</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
-
-  </li>
 
       
       
@@ -441,12 +424,24 @@
                 
               
 
-              <time title="Created: 2019-06-10 15:49:16 / Modified: 16:44:56" itemprop="dateCreated datePublished" datetime="2019-06-10T15:49:16+08:00">2019-06-10</time>
+              <time title="Created: 2019-06-10 15:49:16" itemprop="dateCreated datePublished" datetime="2019-06-10T15:49:16+08:00">2019-06-10</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-23 13:14:06" itemprop="dateModified" datetime="2019-06-23T13:14:06+08:00">2019-06-23</time>
               
             
           </span>
@@ -546,39 +541,30 @@
       
 
       
-        <img src="https://i.loli.net/2019/06/10/5cfe16d677f5b30473.png">
-
+        <p><img src="https://i.loli.net/2019/06/10/5cfe16d677f5b30473.png"></p>
 <p>In the <a href="https://goldenaarcher.github.io/2019/06/09/NexT-Upgrade/">NexT Upgrade</a>, I list some upgrades can be done to create a better looking and more powerful site. During the process of digging, I also found some features or issues that’s not related to the theme NexT, but Hexo itself. Therefore, I moved out of the sections that’s only related to Hexo here.</p>
 <p>The only file needs to be modified here is the <code>_config.yml</code> and other files under root directory.</p>
 <a id="more"></a>
-
 <h1 id="Sub-Directory-for-Posts"><a href="#Sub-Directory-for-Posts" class="headerlink" title="Sub Directory for Posts"></a>Sub Directory for Posts</h1><p>I didn’t realize the directories under <code>categories</code> were not properly organized. What I wanted is:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">|-GitHub</span><br><span class="line">|	|-Git bash</span><br><span class="line">|	|-Markdown</span><br><span class="line">|-Hexo</span><br><span class="line">|	|-NexT</span><br><span class="line">|-Maven</span><br></pre></td></tr></table></figure>
-
 <p>However, it turned out to be like:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">|-GitHub</span><br><span class="line">|-GitHub/Git Bash</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
 <p>And the problem is that I did not properly organized <code>categories</code> in the source file, the proper way of constructing level of directory is using <strong>dash(-)</strong>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">categories: </span><br><span class="line">- Hexo</span><br><span class="line">- NexT</span><br></pre></td></tr></table></figure>
-
 <p>Then, the structure became:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">|-Hexo</span><br><span class="line">|	|-NexT</span><br></pre></td></tr></table></figure>
-
 <p>Rather than <code>Hexo/NexT</code></p>
 <hr>
 <h1 id="Order-Posts-by-Update-Time"><a href="#Order-Posts-by-Update-Time" class="headerlink" title="Order Posts by Update Time"></a>Order Posts by Update Time</h1><p>Change the <code>order_by</code> to <code>-updated</code>, now the articles listed in the home page is ordered by time updated rather than time created.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Home page setting</span><br><span class="line"># path: Root path for your blogs index page. (default = &apos;&apos;)</span><br><span class="line"># per_page: Posts displayed per page. (0 = disable pagination)</span><br><span class="line"># order_by: Posts order. (Order by date descending by default)</span><br><span class="line">index_generator:</span><br><span class="line">  path: &apos;&apos;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -updated</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="Trim-Command"><a href="#Trim-Command" class="headerlink" title="Trim Command"></a>Trim Command</h1><p>Use short <code>npm</code> command to run instead of long command such as <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>. Add following scripts to <code>package.json</code>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;d&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&quot;,</span><br><span class="line">    &quot;cg&quot;: &quot;hexo clean &amp;&amp; hexo g&quot;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
 <p>Now, the long command can be replaced with <code>npm run d</code></p>
 <p>I do not recommend adding <code>&quot;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&quot;</code>  to <code>&quot;scripts&quot;</code>. </p>
 <p>I tried it, and it resulted prompt switch to new line after <code>INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code> information, and <code>Ctrl+C</code> cannot strop server from running. It can be a problem if settings are modified, and the process needs to be restarted.</p>
 <p>So I have to find the process running the port 4000, and force to kill it, then restart the server, which is more time consuming.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Find the pid of the process running in the port number (e.g., 8080)</span><br><span class="line"># from https://stackoverflow.com/questions/48198/how-can-you-find-out-which-process-is-listening-on-a-port-on-windows</span><br><span class="line">$ netstat -ano | findStr &quot;4000&quot;</span><br><span class="line">  TCP    0.0.0.0:4000           0.0.0.0:0              LISTENING       8496                 TCP    [::]:4000              [::]:0                 LISTENING       8496   </span><br><span class="line">$ taskkill /F /PID 8496</span><br><span class="line">SUCCESS: The process with PID 8496 has been terminated.</span><br></pre></td></tr></table></figure>
-
 <hr>
 
       
@@ -734,7 +720,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -783,7 +769,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -844,7 +830,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -942,7 +930,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">47k</span>
+    <span title="Symbols count total">50k</span>
   
 
   
@@ -951,7 +939,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">42 mins.</span>
+    <span title="Reading time total">46 mins.</span>
   
 </div>
 
@@ -1186,6 +1174,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 

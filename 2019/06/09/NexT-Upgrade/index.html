@@ -107,7 +107,7 @@
 <meta property="og:description" content="Technically, this article is not upgrading the NexT theme, rather, it’s exploring the already setup features of the theme.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2019/06/09/5cfcda11a511617155.jpg">
-<meta property="og:updated_time" content="2019-06-22T18:29:09.513Z">
+<meta property="og:updated_time" content="2019-06-23T05:14:30.126Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NexT Upgrade">
 <meta name="twitter:description" content="Technically, this article is not upgrading the NexT theme, rather, it’s exploring the already setup features of the theme.">
@@ -330,23 +330,6 @@
     <a href="/reading/" rel="section"><i class="menu-item-icon fa fa-fw fa-book-reader"></i> <br>reading</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
-
-  </li>
 
       
       
@@ -458,7 +441,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-23 02:29:09" itemprop="dateModified" datetime="2019-06-23T02:29:09+08:00">2019-06-23</time>
+                <time title="Modified: 2019-06-23 13:14:30" itemprop="dateModified" datetime="2019-06-23T13:14:30+08:00">2019-06-23</time>
               
             
           </span>
@@ -565,11 +548,9 @@
       
 
       
-        <img src="https://i.loli.net/2019/06/09/5cfcda11a511617155.jpg" width="400">
-
+        <p><img src="https://i.loli.net/2019/06/09/5cfcda11a511617155.jpg" width="400"></p>
 <p>Technically, this article is not upgrading the NexT theme, rather, it’s exploring the already setup features of the theme.</p>
 <a id="more"></a>
-
 <p>If not specified, all the changes made are under <code>/themes/next/_config.yml</code>. Just use <code>ctrl+f</code> to find the corresponding section, and modified the section of code.</p>
 <hr>
 <h1 id="Symbol-Count"><a href="#Symbol-Count" class="headerlink" title="Symbol Count"></a>Symbol Count</h1><p>Basically, I just followed the instructions from the <a href="https://github.com/theme-next/hexo-symbols-count-time" target="_blank" rel="noopener">project</a>. Authors have explained it pretty well.</p>
@@ -579,11 +560,9 @@
 <p>Better than <a href="https://github.com/ierhyna/hexo-reading-time" target="_blank" rel="noopener"><code>hexo-reading-time</code></a> and faster than <a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="noopener"><code>hexo-worcount</code></a>. No external dependencies.</p>
 </blockquote>
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
-
 <h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><ol>
 <li><p>Edit the <code>_config.yml</code> of Hexo rather than NexT, use <code>ctrl+f</code> to find whether <code>symbols_count_time</code> is in the configuration file. If so, edit it, otherwise, just add this section of code at the end of file:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br><span class="line">  exclude_codeblock: false</span><br></pre></td></tr></table></figure>
-
 <p>Most likely <code>symbols_count_time</code> is not here or is commented out, otherwise, the function should already be on the site.</p>
 </li>
 <li><p>Edit <code>themes/next/_config.yml</code> as following:</p>
@@ -591,41 +570,34 @@
 </li>
 <li><p>Last, rerun the server:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># If you don&apos;t see any changes, and most likely you will not see the changes...</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 <p>For more detailed information, read the instructions from the project.</p>
 <hr>
 <h1 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Blog rolls</span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Links</span><br><span class="line">links_layout: block</span><br><span class="line">#links_layout: inline</span><br><span class="line">links:</span><br><span class="line">  Name_of_the_site: https://name_of_the_link.com</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="Social-Links"><a href="#Social-Links" class="headerlink" title="Social Links"></a>Social Links</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># Social Links</span><br><span class="line"># Usage: `Key: permalink || icon`</span><br><span class="line"># Key is the link label showing to end users.</span><br><span class="line"># Value before `||` delimeter is the target permalink.</span><br><span class="line"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/GoldenaArcher || github</span><br><span class="line">  #E-Mail: mailto:yourname@gmail.com || envelope</span><br><span class="line">  #Weibo: https://weibo.com/yourname || weibo</span><br><span class="line">  #Google: https://plus.google.com/yourname || google</span><br><span class="line">  #Twitter: https://twitter.com/yourname || twitter</span><br><span class="line">  #FB Page: https://www.facebook.com/yourname || facebook</span><br><span class="line">  #VK Group: https://vk.com/yourname || vk</span><br><span class="line">  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span><br><span class="line">  #YouTube: https://youtube.com/yourname || youtube</span><br><span class="line">  #Instagram: https://instagram.com/yourname || instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || skype</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="Avatar"><a href="#Avatar" class="headerlink" title="Avatar"></a>Avatar</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar:</span><br><span class="line">  # In theme directory (source/images): /images/avatar.gif</span><br><span class="line">  # In site directory (source/uploads): /uploads/avatar.gif</span><br><span class="line">  # You can also use other linking images.</span><br><span class="line">  url: put url here</span><br><span class="line">  # If true, the avatar would be dispalyed in circle.</span><br><span class="line">  rounded: false</span><br><span class="line">  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.</span><br><span class="line">  opacity: 1</span><br><span class="line">  # If true, the avatar would be rotated with the cursor.</span><br><span class="line">  rotated: false</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="Since"><a href="#Since" class="headerlink" title="Since"></a>Since</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">  # Specify the date when the site was setup. If not defined, current year will be used.</span><br><span class="line">  since: 2019</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="View"><a href="#View" class="headerlink" title="View"></a>View</h1><p>Doesn’t want to translate since I’m not sure how I did it… but the <a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/LEANCLOUD-COUNTER-SECURITY.md" target="_blank" rel="noopener">instruction</a> is very clear and can be easily to set up for free.</p>
 <hr>
 <h1 id="Visitors"><a href="#Visitors" class="headerlink" title="Visitors"></a>Visitors</h1><p>Just set <code>busuanzi</code> function to true:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Show Views / Visitors of the website / page with busuanzi.</span><br><span class="line"># Get more information on http://ibruce.info/2015/04/04/busuanzi</span><br><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="Copyright"><a href="#Copyright" class="headerlink" title="Copyright"></a>Copyright</h1><p>I just enable the default copyright</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">creative_commons:</span><br><span class="line">  license: by-nc-sa</span><br><span class="line">  sidebar: true	# show it on the sidebar</span><br><span class="line">  post: true	# show it below the post</span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid:  some-app-id</span><br><span class="line">  appkey:  some-app-key</span><br><span class="line">  notify: false # mail notifier, See: https://github.com/xCss/Valine/wiki</span><br><span class="line">  verify: true</span><br><span class="line">  placeholder: Just go go # comment box placeholder</span><br><span class="line">  avatar: mm</span><br><span class="line">  guest_info: nick,mail,link</span><br><span class="line">  pageSize: 10</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="Font-Awesome"><a href="#Font-Awesome" class="headerlink" title="Font Awesome"></a>Font Awesome</h1><p>Update to 5.8.2 since many icons cannot be find with built-in version</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vendors:</span><br><span class="line">  # Internal version: 4.6.2</span><br><span class="line">  # See: https://fontawesome.com</span><br><span class="line">  # Example:</span><br><span class="line">  # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css</span><br><span class="line">  # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css</span><br><span class="line">  fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css</span><br></pre></td></tr></table></figure>
-
 <hr>
-<h1 id="运行时间-Runtime"><a href="#运行时间-Runtime" class="headerlink" title="运行时间/Runtime"></a>运行时间/Runtime</h1><p><a href="/2019/06/23/站点运行时间/">站点运行时间</a></p>
+<h1 id="运行时间-Runtime"><a href="#运行时间-Runtime" class="headerlink" title="运行时间/Runtime"></a>运行时间/Runtime</h1><p><a href="/2019/06/23/站点运行时间/">站点运行时间</a> in cn</p>
+<hr>
+<h1 id="Mathjax"><a href="#Mathjax" class="headerlink" title="Mathjax"></a>Mathjax</h1><p><a href="2019/06/23/mathjax数学公式/">mathjax</a> in cn</p>
 <hr>
 
       
@@ -781,7 +753,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -830,7 +802,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -891,7 +863,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -954,7 +928,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Symbol-Count"><span class="nav-number">1.</span> <span class="nav-text">Symbol Count</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">1.1.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configuration"><span class="nav-number">1.2.</span> <span class="nav-text">Configuration</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Links"><span class="nav-number">2.</span> <span class="nav-text">Links</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Social-Links"><span class="nav-number">3.</span> <span class="nav-text">Social Links</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Avatar"><span class="nav-number">4.</span> <span class="nav-text">Avatar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Since"><span class="nav-number">5.</span> <span class="nav-text">Since</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#View"><span class="nav-number">6.</span> <span class="nav-text">View</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Visitors"><span class="nav-number">7.</span> <span class="nav-text">Visitors</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Copyright"><span class="nav-number">8.</span> <span class="nav-text">Copyright</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Comment"><span class="nav-number">9.</span> <span class="nav-text">Comment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Font-Awesome"><span class="nav-number">10.</span> <span class="nav-text">Font Awesome</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行时间-Runtime"><span class="nav-number">11.</span> <span class="nav-text">运行时间/Runtime</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Symbol-Count"><span class="nav-number">1.</span> <span class="nav-text">Symbol Count</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">1.1.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configuration"><span class="nav-number">1.2.</span> <span class="nav-text">Configuration</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Links"><span class="nav-number">2.</span> <span class="nav-text">Links</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Social-Links"><span class="nav-number">3.</span> <span class="nav-text">Social Links</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Avatar"><span class="nav-number">4.</span> <span class="nav-text">Avatar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Since"><span class="nav-number">5.</span> <span class="nav-text">Since</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#View"><span class="nav-number">6.</span> <span class="nav-text">View</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Visitors"><span class="nav-number">7.</span> <span class="nav-text">Visitors</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Copyright"><span class="nav-number">8.</span> <span class="nav-text">Copyright</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Comment"><span class="nav-number">9.</span> <span class="nav-text">Comment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Font-Awesome"><span class="nav-number">10.</span> <span class="nav-text">Font Awesome</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行时间-Runtime"><span class="nav-number">11.</span> <span class="nav-text">运行时间/Runtime</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mathjax"><span class="nav-number">12.</span> <span class="nav-text">Mathjax</span></a></li></ol></div>
             
 
           </div>
@@ -989,7 +963,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">47k</span>
+    <span title="Symbols count total">50k</span>
   
 
   
@@ -998,7 +972,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">42 mins.</span>
+    <span title="Reading time total">46 mins.</span>
   
 </div>
 
@@ -1233,6 +1207,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 
