@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://goldenaarcher.github.io/2019/06/23/Loop-Invariant/</loc>
+    
+    <lastmod>2019-06-27T08:19:35.733Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://goldenaarcher.github.io/2019/06/23/Inserction-Sort/</loc>
     
-    <lastmod>2019-06-23T15:19:11.047Z</lastmod>
+    <lastmod>2019-06-25T10:45:16.824Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://goldenaarcher.github.io/link/index.html</loc>
+    
+    <lastmod>2019-06-24T06:15:35.750Z</lastmod>
     
   </url>
   
@@ -54,13 +68,6 @@
     <loc>https://goldenaarcher.github.io/2019/06/21/%E9%9D%A2%E7%BB%8FJune-21-2019/</loc>
     
     <lastmod>2019-06-21T07:29:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://goldenaarcher.github.io/link/index.html</loc>
-    
-    <lastmod>2019-06-17T02:43:02.001Z</lastmod>
     
   </url>
   
