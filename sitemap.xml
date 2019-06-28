@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://goldenaarcher.github.io/2019/06/05/hello-world/</loc>
+    
+    <lastmod>2019-06-28T15:15:15.099Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://goldenaarcher.github.io/2019/06/28/%E4%B8%83%E7%89%9B%E4%BA%91%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/</loc>
+    
+    <lastmod>2019-06-28T14:52:45.950Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://goldenaarcher.github.io/2019/06/28/%E6%9B%B4%E6%8D%A2%E4%B8%80%E7%BA%A7%E5%9F%9F%E5%90%8D/</loc>
     
-    <lastmod>2019-06-28T09:22:09.549Z</lastmod>
+    <lastmod>2019-06-28T11:38:19.560Z</lastmod>
     
   </url>
   
@@ -145,13 +159,6 @@
     <loc>https://goldenaarcher.github.io/2019/06/07/Build-GitHub-Page-with-Hexo/</loc>
     
     <lastmod>2019-06-09T10:08:28.870Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://goldenaarcher.github.io/2019/06/05/hello-world/</loc>
-    
-    <lastmod>2019-06-05T02:24:25.674Z</lastmod>
     
   </url>
   
