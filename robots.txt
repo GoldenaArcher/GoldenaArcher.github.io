@@ -1,9 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /about/
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/ 
-Allow: /resources/ 
+Allow: /link/ 
+Allow: /reading/ 
 Disallow: /vendors/
 Disallow: /js/
 Disallow: /css/
