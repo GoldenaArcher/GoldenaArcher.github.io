@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="GoldenaArcher&#39;s Note">
 <meta property="og:description" content="希望这次能刷过100题……">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-07T03:24:06.056Z">
+<meta property="og:updated_time" content="2019-07-07T07:01:03.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1. Two Sum">
 <meta name="twitter:description" content="希望这次能刷过100题……">
@@ -424,9 +424,13 @@
                 
               
 
-              <time title="Created: 2019-07-07 11:24:06" itemprop="dateCreated datePublished" datetime="2019-07-07T11:24:06+08:00">2019-07-07</time>
+              <time title="Created: 2019-07-07 11:24:06 / Modified: 15:01:03" itemprop="dateCreated datePublished" datetime="2019-07-07T11:24:06+08:00">2019-07-07</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -491,7 +495,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">1.9k</span>
+                <span title="Symbols count in article">2k</span>
               
 
               
@@ -535,7 +539,9 @@
 <p>Because nums[<strong>0</strong>] + nums[1] = 2 + 7 = 9,<br>return [<strong>0, 1</strong>].</p>
 </blockquote>
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>The approach is using hash map to solve the problem. While iterating through the array, the value and corresponding index is stored into hash map. Whilst at the same time, the complementary value of the current index is also checked. If the value of complementary value exists in hash map, just directly return the index of complementary value and current index.</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><h2 id="EN"><a href="#EN" class="headerlink" title="EN"></a>EN</h2><p>The approach is using hash map to solve the problem. While iterating through the array, the value and corresponding index is stored into hash map. Whilst at the same time, the complementary value of the current index is also checked. If the value of complementary value exists in hash map, just directly return the index of complementary value and current index.</p>
+<hr>
+<h1 id="CN"><a href="#CN" class="headerlink" title="CN"></a>CN</h1><p>解法是使用Hash Map去解这道题。遍历整个列表的同时，将值作为键，对应的序号作为值存入Hash Map中。遍历时，计算当前值和的目标值的差，记作补数(complementary)，并在Hash Map中寻找补数是否存在。如果补数存在，就直接返回补数对应的序号和当前序号。</p>
 <hr>
 <h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complementary = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complementary)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(complementary), i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No solution"</span>);	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
@@ -544,7 +550,7 @@
 <hr>
 <h1 id="Complexity-Analysis"><a href="#Complexity-Analysis" class="headerlink" title="Complexity Analysis"></a>Complexity Analysis</h1><ul>
 <li>Time Complexity: <script type="math/tex">O(n)</script> since only need to traverse the whole list containing <script type="math/tex">n</script> element once; and the look up in the table costs <script type="math/tex">O(1)</script> time.</li>
-<li>Space Complexity: %%O(n)<script type="math/tex">. At the worst case, if the pair of index does not exist, then all elements are required to be stored in the hash map, which at most is</script>n$$ elements.</li>
+<li>Space Complexity: <script type="math/tex">O(n)</script>. At the worst case, if the pair of index does not exist, then all elements are required to be stored in the hash map, which at most is <script type="math/tex">n</script> elements.</li>
 </ul>
 <hr>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://leetcode.com/problems/two-sum/solution/" target="_blank" rel="noopener">Solution</a></p>
@@ -902,7 +908,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Question"><span class="nav-number">1.</span> <span class="nav-text">Question</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">2.1.</span> <span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python3"><span class="nav-number">2.2.</span> <span class="nav-text">Python3</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Complexity-Analysis"><span class="nav-number">3.</span> <span class="nav-text">Complexity Analysis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Question"><span class="nav-number">1.</span> <span class="nav-text">Question</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EN"><span class="nav-number">2.1.</span> <span class="nav-text">EN</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CN"><span class="nav-number">3.</span> <span class="nav-text">CN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">3.1.</span> <span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python3"><span class="nav-number">3.2.</span> <span class="nav-text">Python3</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Complexity-Analysis"><span class="nav-number">4.</span> <span class="nav-text">Complexity Analysis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
@@ -946,7 +952,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">56 mins.</span>
+    <span title="Reading time total">57 mins.</span>
   
 </div>
 
@@ -1186,6 +1192,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
