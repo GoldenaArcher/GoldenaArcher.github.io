@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://goldenaarcher.com/about/index.html</loc>
+    
+    <lastmod>2019-07-12T13:21:05.487Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://goldenaarcher.com/2019/07/08/ReactJS2-Component-%E7%BB%84%E4%BB%B6/</loc>
     
     <lastmod>2019-07-08T13:58:19.240Z</lastmod>
@@ -138,13 +145,6 @@
     <loc>https://goldenaarcher.com/categories/index.html</loc>
     
     <lastmod>2019-06-17T02:40:37.646Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://goldenaarcher.com/about/index.html</loc>
-    
-    <lastmod>2019-06-17T02:36:36.660Z</lastmod>
     
   </url>
   
