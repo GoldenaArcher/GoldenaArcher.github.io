@@ -128,8 +128,7 @@
 <meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/create_a_new_proj.jpg">
 <meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/execution.png">
 <meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/show_all_files.png">
-<meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/executionOfDemo.png">
-<meta property="og:updated_time" content="2019-07-13T12:25:21.349Z">
+<meta property="og:updated_time" content="2019-07-13T12:35:38.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#1- IDE安装以及第一个程序">
 <meta name="twitter:description" content="Boss说，放下手中的Java，去看.Net的东西，好的老板。">
@@ -463,7 +462,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-07-13 20:25:21" itemprop="dateModified" datetime="2019-07-13T20:25:21+08:00">2019-07-13</time>
+                <time title="Modified: 2019-07-13 20:35:38" itemprop="dateModified" datetime="2019-07-13T20:35:38+08:00">2019-07-13</time>
               
             
           </span>
@@ -536,7 +535,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">4.5k</span>
+                <span title="Symbols count in article">3.7k</span>
               
 
               
@@ -550,7 +549,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">4 mins.</span>
+                <span title="Reading time">3 mins.</span>
               
             </div>
           
@@ -627,46 +626,6 @@
 </li>
 </ol>
 <h3 id="运行概述"><a href="#运行概述" class="headerlink" title="运行概述"></a>运行概述</h3><p>编译过后，C#的文件被转换成了Common Intermediate Language(CIL)，CIL是人类可读的最底层代码。随后.NET框架提供一个名为<code>Common Language Runtime(CLR)</code>的运行引擎，CLR中的<code>Just in time(JIT)</code>编译器负责运行时的代码编译，将CIL代码转换成机器可读层面的代码。</p>
-<hr>
-<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p>考虑以下变量为所需和所求的变量，demo代码会展示如何声明变量以及计算所需变量。</p>
-<p><strong>需求：</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>变量</strong></th>
-<th style="text-align:center"><strong>值</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">手机价格</td>
-<td style="text-align:center">5000</td>
-</tr>
-<tr>
-<td style="text-align:center">数量</td>
-<td style="text-align:center">200</td>
-</tr>
-<tr>
-<td style="text-align:center">折扣</td>
-<td style="text-align:center">0.04</td>
-</tr>
-<tr>
-<td style="text-align:center">总价</td>
-<td style="text-align:center">？</td>
-</tr>
-<tr>
-<td style="text-align:center">折后总价</td>
-<td style="text-align:center">？</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> MyFirstProject</span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Program</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span><span class="params">(<span class="built_in">string</span>[] args)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">double</span> mobilePrice = <span class="number">5000</span>;</span><br><span class="line">            <span class="keyword">short</span> quantity = <span class="number">200</span>;</span><br><span class="line">            <span class="keyword">double</span> discount = <span class="number">.04</span>;</span><br><span class="line">            <span class="keyword">double</span> discountedPrice = mobilePrice * (<span class="number">1</span> - discount);</span><br><span class="line">            <span class="keyword">double</span> totalPrice = discountedPrice * quantity;</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">"折后价=&#123;1&#125;\n总价=&#123;0&#125;"</span>, totalPrice, discountedPrice);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果如下：</p>
-<img src="http://qiniu.goldenaarcher.com/images//c%23/basics/executionOfDemo.png">
-<p>其中值得注意的是，在<code>Console.WriteLine(&quot;折后价={1}\n总价={0}&quot;, totalPrice, discountedPrice);</code>行中，<code>{0}</code>指代的是<code>totalPrice</code>，而<code>{1}</code>指代的是<code>totalPrice</code>。</p>
 
       
     </div>
@@ -1037,7 +996,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IDE的安装和配置"><span class="nav-number">1.</span> <span class="nav-text">IDE的安装和配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建立第一个C-项目"><span class="nav-number">2.</span> <span class="nav-text">建立第一个C#项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建项目"><span class="nav-number">2.1.</span> <span class="nav-text">新建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目结构"><span class="nav-number">2.1.1.</span> <span class="nav-text">项目结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行项目"><span class="nav-number">2.2.</span> <span class="nav-text">运行项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行概述"><span class="nav-number">2.2.1.</span> <span class="nav-text">运行概述</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Demo"><span class="nav-number">3.</span> <span class="nav-text">Demo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IDE的安装和配置"><span class="nav-number">1.</span> <span class="nav-text">IDE的安装和配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建立第一个C-项目"><span class="nav-number">2.</span> <span class="nav-text">建立第一个C#项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建项目"><span class="nav-number">2.1.</span> <span class="nav-text">新建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目结构"><span class="nav-number">2.1.1.</span> <span class="nav-text">项目结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行项目"><span class="nav-number">2.2.</span> <span class="nav-text">运行项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行概述"><span class="nav-number">2.2.1.</span> <span class="nav-text">运行概述</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1072,7 +1031,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">72k</span>
+    <span title="Symbols count total">71k</span>
   
 
   
@@ -1081,7 +1040,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">1:05</span>
+    <span title="Reading time total">1:04</span>
   
 </div>
 
