@@ -126,10 +126,10 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/vs_screenshot1.jpg">
 <meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/create_a_new_proj.jpg">
-<meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/execution">
+<meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/execution.png">
 <meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/show_all_files.png">
-<meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/executionOfDemo">
-<meta property="og:updated_time" content="2019-07-13T12:21:42.548Z">
+<meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/basics/executionOfDemo.png">
+<meta property="og:updated_time" content="2019-07-13T12:25:21.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#1- IDE安装以及第一个程序">
 <meta name="twitter:description" content="Boss说，放下手中的Java，去看.Net的东西，好的老板。">
@@ -463,7 +463,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-07-13 20:21:42" itemprop="dateModified" datetime="2019-07-13T20:21:42+08:00">2019-07-13</time>
+                <time title="Modified: 2019-07-13 20:25:21" itemprop="dateModified" datetime="2019-07-13T20:25:21+08:00">2019-07-13</time>
               
             
           </span>
@@ -617,7 +617,7 @@
 </blockquote>
 </li>
 <li><p>在确认没有编译错误后，用<code>Debug -&gt; Start Without Debugging/ctrl+f5</code>或是<code>Debug -&gt; Start Debugging/f5</code>来运行项目。以下为当前文件的运行结果：</p>
-<img src="http://qiniu.goldenaarcher.com/images//c%23/basics/execution">
+<img src="http://qiniu.goldenaarcher.com/images//c%23/basics/execution.png">
 </li>
 <li><p>点击<code>Show All Files</code>去查看所有生成的文件。</p>
 <img src="http://qiniu.goldenaarcher.com/images//c%23/basics/show_all_files.png">
@@ -665,7 +665,7 @@
 <p>代码：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> MyFirstProject</span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Program</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span><span class="params">(<span class="built_in">string</span>[] args)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">double</span> mobilePrice = <span class="number">5000</span>;</span><br><span class="line">            <span class="keyword">short</span> quantity = <span class="number">200</span>;</span><br><span class="line">            <span class="keyword">double</span> discount = <span class="number">.04</span>;</span><br><span class="line">            <span class="keyword">double</span> discountedPrice = mobilePrice * (<span class="number">1</span> - discount);</span><br><span class="line">            <span class="keyword">double</span> totalPrice = discountedPrice * quantity;</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">"折后价=&#123;1&#125;\n总价=&#123;0&#125;"</span>, totalPrice, discountedPrice);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行结果如下：</p>
-<img src="http://qiniu.goldenaarcher.com/images//c%23/basics/executionOfDemo">
+<img src="http://qiniu.goldenaarcher.com/images//c%23/basics/executionOfDemo.png">
 <p>其中值得注意的是，在<code>Console.WriteLine(&quot;折后价={1}\n总价={0}&quot;, totalPrice, discountedPrice);</code>行中，<code>{0}</code>指代的是<code>totalPrice</code>，而<code>{1}</code>指代的是<code>totalPrice</code>。</p>
 
       
