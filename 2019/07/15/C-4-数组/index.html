@@ -116,20 +116,18 @@
 
 
 
-  <meta name="description" content="有了独立的域名之后，其实就在考虑图片的事情。之前的选择是使用第三方图床例如说sm.ms，可惜国内无法使用的imgur。但是也有考虑到说，不知道什么时候别人的图床就关了，就在域名搞好了之后决定设置一个自己专用的资源储存。">
-<meta name="keywords" content="Hexo,七牛云">
+  <meta name="description" content="数组及相关基础">
+<meta name="keywords" content="C#,.Net">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用七牛云COS作为图床">
-<meta property="og:url" content="https://goldenaarcher.com/2019/07/14/使用七牛云COS作为图床/index.html">
+<meta property="og:title" content="C#4 - 数组">
+<meta property="og:url" content="https://goldenaarcher.com/2019/07/15/C-4-数组/index.html">
 <meta property="og:site_name" content="GoldenaArcher&#39;s Note">
-<meta property="og:description" content="有了独立的域名之后，其实就在考虑图片的事情。之前的选择是使用第三方图床例如说sm.ms，可惜国内无法使用的imgur。但是也有考虑到说，不知道什么时候别人的图床就关了，就在域名搞好了之后决定设置一个自己专用的资源储存。">
+<meta property="og:description" content="数组及相关基础">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://qiniu.goldenaarcher.com/images/test/demo.png">
-<meta property="og:updated_time" content="2019-07-14T06:22:19.769Z">
+<meta property="og:updated_time" content="2019-07-15T14:06:27.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用七牛云COS作为图床">
-<meta name="twitter:description" content="有了独立的域名之后，其实就在考虑图片的事情。之前的选择是使用第三方图床例如说sm.ms，可惜国内无法使用的imgur。但是也有考虑到说，不知道什么时候别人的图床就关了，就在域名搞好了之后决定设置一个自己专用的资源储存。">
-<meta name="twitter:image" content="http://qiniu.goldenaarcher.com/images/test/demo.png">
+<meta name="twitter:title" content="C#4 - 数组">
+<meta name="twitter:description" content="数组及相关基础">
 
 
 
@@ -137,7 +135,7 @@
 
   
   
-  <link rel="canonical" href="https://goldenaarcher.com/2019/07/14/使用七牛云COS作为图床/">
+  <link rel="canonical" href="https://goldenaarcher.com/2019/07/15/C-4-数组/">
 
 
 
@@ -147,7 +145,7 @@
   };
 </script>
 
-  <title>使用七牛云COS作为图床 | GoldenaArcher's Note</title>
+  <title>C#4 - 数组 | GoldenaArcher's Note</title>
   
 
 
@@ -399,7 +397,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://goldenaarcher.com/2019/07/14/使用七牛云COS作为图床/">
+    <link itemprop="mainEntityOfPage" href="https://goldenaarcher.com/2019/07/15/C-4-数组/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GoldenaArcher">
@@ -416,7 +414,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用七牛云COS作为图床
+          <h1 class="post-title" itemprop="name headline">C#4 - 数组
 
               
             
@@ -442,7 +440,7 @@
                 
               
 
-              <time title="Created: 2019-07-14 14:22:19" itemprop="dateCreated datePublished" datetime="2019-07-14T14:22:19+08:00">2019-07-14</time>
+              <time title="Created: 2019-07-15 22:06:27" itemprop="dateCreated datePublished" datetime="2019-07-15T22:06:27+08:00">2019-07-15</time>
             
 
             
@@ -460,7 +458,14 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Net/" itemprop="url" rel="index"><span itemprop="name">.Net</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Net/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a></span>
 
                 
                 
@@ -479,8 +484,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/07/14/使用七牛云COS作为图床/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/14/使用七牛云COS作为图床/" itemprop="commentCount"></span>
+                <a href="/2019/07/15/C-4-数组/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/15/C-4-数组/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -509,7 +514,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">2.3k</span>
+                <span title="Symbols count in article">4k</span>
               
 
               
@@ -523,7 +528,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">2 mins.</span>
+                <span title="Reading time">4 mins.</span>
               
             </div>
           
@@ -543,68 +548,73 @@
       
 
       
-        <p>有了独立的域名之后，其实就在考虑图片的事情。之前的选择是使用第三方图床例如说<a href="https://sm.ms/" target="_blank" rel="noopener">sm.ms</a>，<del>可惜国内无法使用的</del><a href="https://imgur.com/" target="_blank" rel="noopener">imgur</a>。但是也有考虑到说，不知道什么时候别人的图床就关了，就在域名搞好了之后决定设置一个自己专用的资源储存。</p>
+        <p>数组及相关基础</p>
 <a id="more"></a>
-<h1 id="最初的选择"><a href="#最初的选择" class="headerlink" title="最初的选择"></a>最初的选择</h1><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">服务商</th>
-<th style="text-align:center">优点</th>
-<th style="text-align:center">缺点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">七牛云</td>
-<td style="text-align:center">- 稳定，七牛云是一个比较老牌的服务商了，第一次实习的公司使用的就是七牛云<br>- 已经有大神写好了插件，使用<code>hexo-qiniu-sync</code>能够方便的管理图片，并且可以直接引用本地路径<br>- 实名后，有<strong>10GB免费存储空间</strong>以及其他的免费流量，当然，对我个人来说最吸引人的还是免费的存储空间。<br>- 对图片的CDN加速</td>
-<td style="text-align:center">- <code>hexo-qiniu-sync</code>的管理并没有那么的方便，添加新文件可以同步到云端，但是删除却无法同步<br>- 测试域名<strong>30天会过期</strong>，如果没有域名的话，根本无法愉快使用七牛云</td>
-</tr>
-<tr>
-<td style="text-align:center">腾讯COS</td>
-<td style="text-align:center">- 鹅厂，大厂<br>- 功能很多且强大</td>
-<td style="text-align:center">- <strong>2019之后没有免费额度了</strong></td>
-</tr>
-<tr>
-<td style="text-align:center">腾讯云服务器</td>
-<td style="text-align:center">- 本来域名备案就需要云服务器，所以没有什么成本；服务器也不用吃灰，感觉像是在浪费资源<br>- 可以学习一些新的程序使用和配置</td>
-<td style="text-align:center">- 为了域名审核过够买了最便宜的服务器，1M的水管真的是……谁用谁知道……</td>
-</tr>
-<tr>
-<td style="text-align:center">阿里云OSS</td>
-<td style="text-align:center">- 猫厂，大厂<br>- 功能很多且强大</td>
-<td style="text-align:center">- <strong>没有免费额度</strong><br>- 海外好像有免费额度，但是折腾起来太麻烦了……<br>- 感觉猫厂似乎比鹅厂贵一点……？</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>所以，最终选择了七牛云……</p>
-<hr>
-<h1 id="注册和配置七牛云"><a href="#注册和配置七牛云" class="headerlink" title="注册和配置七牛云"></a>注册和配置七牛云</h1><p>上面已经说了，如果没有自己的域名的话，是没有办法愉快的使用七牛云的 。</p>
-<p>详细的步骤有在<a href="/2019/06/28/七牛云绑定自定义域名/">七牛云绑定自定义域名</a>说明。</p>
-<hr>
-<h1 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h1><p>跟着<a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="noopener">hexo-qiniu-sync</a>一起做的，上面的步骤非常详细。</p>
+<h1 id="什么是数组"><a href="#什么是数组" class="headerlink" title="什么是数组"></a>什么是数组</h1><p>数组是一系列相同类型元素的集合，一组数字的数组语法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] id = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+<p>关键字<code>new</code>的应用是为了根据所给的大小，去分配记忆空间。而一旦数组已经声明了长度，之后就无法被改变，所以在声明数组的时候就应当合理分配其长度。</p>
+<p>更多关于数组的资料，可以参考<a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/index" target="_blank" rel="noopener">微软的c# array官方文献</a>。</p>
+<h1 id="案例：数组中数据的存入和获取"><a href="#案例：数组中数据的存入和获取" class="headerlink" title="案例：数组中数据的存入和获取"></a>案例：数组中数据的存入和获取</h1><p>这个Demo展示了：</p>
+<ul>
+<li><p>如何声明和初始化一个数组</p>
+</li>
+<li><p>使用索引获取数据</p>
+</li>
+</ul>
+<p>步骤：</p>
 <ol>
-<li><p>hexo主目录下运行以下命令进行安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-qiniu-sync --save</span><br></pre></td></tr></table></figure>
+<li>打开在之前的文章中之前创建的<code>MyFirstProject</code>，并且将以下的代码替换之前在<code>Program.cs</code>中的代码，下列代码将会展示如何声明和初始化数组元素。</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明一个数组</span></span><br><span class="line"><span class="keyword">int</span>[] id = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> count = <span class="number">1000</span>; </span><br><span class="line"><span class="comment">// 初始化id</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i &lt; id.Length;i++)</span><br><span class="line">&#123;</span><br><span class="line">    id[i] = ++count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>新增以下代码去获取数组元素。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 打印数组元素</span></span><br><span class="line">Console.WriteLine(<span class="string">"数组中的元素为:"</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; id.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">   Console.Write(id[i]+<span class="string">"\t"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>添加插件配置信息到 <code>_config.yml</code> 文件中:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">#七牛云存储设置</span><br><span class="line">##offline       是否离线. 离线状态将使用本地地址渲染</span><br><span class="line">##sync          是否同步</span><br><span class="line">##bucket        空间名称.</span><br><span class="line">##access_key    上传密钥AccessKey</span><br><span class="line">##secret_key    上传密钥SecretKey</span><br><span class="line">##secret_file   秘钥文件路径，可以将上述两个属性配置到文件内，防止泄露，json格式。绝对路径相对路径均可</span><br><span class="line">##dirPrefix     上传的资源子目录前缀.如设置，需与urlPrefix同步 </span><br><span class="line">##urlPrefix     外链前缀.</span><br><span class="line">##up_host      上传服务器路径,如选择华北区域的话配置为http://up-z1.qiniu.com</span><br><span class="line">##local_dir     本地目录.</span><br><span class="line">##update_exist  是否更新已经上传过的文件(仅文件大小不同或在上次上传后进行更新的才会重新上传)</span><br><span class="line">##image/js/css  子参数folder为不同静态资源种类的目录名称，一般不需要改动</span><br><span class="line">##image.extend  这是个特殊参数，用于生成缩略图或加水印等操作。具体请参考http://developer.qiniu.com/docs/v6/api/reference/fop/image/ </span><br><span class="line">##              可使用基本图片处理、高级图片处理、图片水印处理这3个接口。例如 ?imageView2/2/w/500 即生成宽度最多500px的缩略图</span><br><span class="line">qiniu:</span><br><span class="line">  offline: false</span><br><span class="line">  sync: true</span><br><span class="line">  bucket: bucket_name</span><br><span class="line">  secret_file: sec/qn.json or C:</span><br><span class="line">  access_key: AccessKey</span><br><span class="line">  secret_key: SecretKey</span><br><span class="line">  dirPrefix: static</span><br><span class="line">  urlPrefix: http://bucket_name.qiniudn.com/static</span><br><span class="line">  up_host: http://upload.qiniu.com</span><br><span class="line">  local_dir: static</span><br><span class="line">  update_exist: true</span><br><span class="line">  image: </span><br><span class="line">    folder: images</span><br><span class="line">    extend: </span><br><span class="line">  js:</span><br><span class="line">    folder: js</span><br><span class="line">  css:</span><br><span class="line">    folder: css</span><br></pre></td></tr></table></figure>
-<p>其中<code>bucket</code>是在注册和配置七牛云中生成的名字。<code>AccessKey</code>和<code>SecretKey</code>是在注册七牛云之后，从<code>个人中心 -&gt; 密钥管理 -&gt; 获取AK(AccessKey)和SK(SecretKey)</code>获得。其余基本保持一致就可以了。</p>
-<p>其中值得注意的事情就是，原作者在安装过程中已经说了：<span style="color: red">注意，不要在plugins下面添加hexo-qiniu-sync的配置项，否则会导致错误</span>，因此，以下这一段<span style="color: red"><strong>绝对不能</strong></span>加到配置文件里。</p>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; plugins:</span><br><span class="line">&gt;   - hexo-qiniu-sync</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>至于具体的配置参数说明，感兴趣的可以在<a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="noopener">hexo-qiniu-sync</a>中查阅。</p>
-</li>
-<li><p>使用<code>hexo-qiniu-sync</code>。</p>
-<p>一般我常用的就是<code><img src="http://qiniu.goldenaarcher.com/images/test/demo.png"></code>，不过说真的，也的确需要多用一下其他的功能。</p>
-<p>不过到这里，使用七牛云作为图库的设置就已经完成了，同时搭配<code>hexo-qiniu-sync</code>，就可以直接在md文档中quote本地的图片了。</p>
-<p>其他的就是，<code>localhost</code>里对于图片的preview不是很友好，大概是因为七牛云里现在没办法加<code>localhost</code>和添加端口号到白名单里的原因吧。</p>
+<li><p>查看输出结果</p>
 </li>
 </ol>
-<hr>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="noopener">hexo-qiniu-sync</a></p>
+<blockquote>
+<p>数组中的元素为:</p>
+<p>1001    1002    1003    1004    1005    1006    1007    1008    1009    1010    Press any key to continue . . .</p>
+</blockquote>
+<ol>
+<li>将以下代码加入<code>Program.cs</code>中，并查看数出结果：</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id[<span class="number">10</span>]=<span class="number">1011</span>;</span><br></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<blockquote>
+<p>数组中的元素为:</p>
+<p>1001    1002    1003    1004    1005    1006    1007    1008    1009    1010</p>
+<p>Unhandled Exception: System.IndexOutOfRangeException: Index was outside the bounds of the array.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;at MyFirstProject.Program.Main(String[] args) in MyFirstProject\MyFirstProject\Program.cs:line 25</p>
+</blockquote>
+<p>原因是因为，数组的长度是固定的，而且数组的长度一但被声明，就无法被改变。<code>id</code>的长度是10，当<code>id[10]=1011;</code>这行代码尝试将新的id加入到数组的第11位的时候（数组的索引从0开始），就会报<code>IndexOutOfRangeException</code>的错。</p>
+<h1 id="Foreach循环"><a href="#Foreach循环" class="headerlink" title="Foreach循环"></a>Foreach循环</h1><p>除了在<a href="/2019/07/14/C-3-流程控制/">C#3 - 流程控制</a>遍历方式之外，C#也另外提供了一种不需要额外的变量去保存索引就能够遍历所有元素的方式。</p>
+<p>以下代码就利用了<code>foreach</code>进行数组的遍历。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> MyFirstProject&#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Program</span>&#123;</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span><span class="params">(<span class="built_in">string</span>[] args)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="comment">// 以下数组是一个关于字符串的集合——一系列编程语言</span></span><br><span class="line">            <span class="built_in">string</span>[] languages = &#123;</span><br><span class="line">                                <span class="string">"C Programming"</span>,</span><br><span class="line">                                <span class="string">"C++ Programming"</span>,</span><br><span class="line">                                <span class="string">"C# Programming"</span>,</span><br><span class="line">                                <span class="string">"Java Programming"</span>,</span><br><span class="line">                            &#125;;</span><br><span class="line">            <span class="comment">// foreach用来查看数组中的每一个元素</span></span><br><span class="line">            <span class="comment">// foreach的语法如下：</span></span><br><span class="line">            <span class="comment">// foreach (var item in collection)</span></span><br><span class="line">            <span class="comment">// &#123;</span></span><br><span class="line">            <span class="comment">//     // ...</span></span><br><span class="line">            <span class="comment">// &#125;</span></span><br><span class="line">            <span class="comment">// 如：</span></span><br><span class="line">            foreach (<span class="built_in">string</span> language in languages)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(language);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h1><p>最简单的多维数组自然就是一个二维数组。一个二维数组就是一个关于一维数组的数组。</p>
+<p>以下代码声明并遍历了一个二维数组：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> MyFirstProject&#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Program</span>&#123;</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span><span class="params">(<span class="built_in">string</span>[] args)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="comment">// 二维数组声明语法 - int[row, column]</span></span><br><span class="line">            <span class="keyword">int</span>[,] twoD = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>, <span class="number">3</span>] &#123;</span><br><span class="line">                                               &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;,</span><br><span class="line">                                               &#123; <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> &#125;,</span><br><span class="line">                                               &#123; <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span> &#125;</span><br><span class="line">                                          &#125;;</span><br><span class="line">            <span class="comment">// 外循环用来打印一行数组                             </span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 内循环用来打印一行数组中的每一列元素</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// twoD[i, j] 与 twoD[row, column] 相同</span></span><br><span class="line">                    Console.Write(twoD[i, j] + <span class="string">" "</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                Console.WriteLine();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// The Console.Write() 和 Console.WriteLine() 只是用来使得输出结果更加的美观</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 来自 https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/multidimensional-arrays</span></span><br><span class="line">            <span class="comment">// 的3D数组</span></span><br><span class="line">            <span class="keyword">int</span>[,,] array3D = <span class="keyword">new</span> <span class="keyword">int</span>[,,] &#123; &#123; &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;, &#123; <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> &#125; &#125;,</span><br><span class="line">                                 &#123; &#123; <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span> &#125;, &#123; <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span> &#125; &#125; &#125;;</span><br><span class="line">            <span class="keyword">int</span>[,,] array3Da = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>] &#123; &#123; &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;, &#123; <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> &#125; &#125;,</span><br><span class="line">                                       &#123; &#123; <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span> &#125;, &#123; <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span> &#125; &#125; &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后输出结果为：</p>
+<blockquote>
+<p>1&nbsp;&nbsp;2 &nbsp;3</p>
+<p>4 &nbsp;5&nbsp; 6</p>
+<p>7 &nbsp;8&nbsp; 9</p>
+</blockquote>
+<p>C#中对数组的声明可以像Java一样使用<code>int[][] array...</code>这样声明，也可以像Demo中一样。</p>
+<h1 id="最后关于length"><a href="#最后关于length" class="headerlink" title="最后关于length"></a><span style="color:red">最后关于length</span></h1><p>如果在<code>Program.cs</code>中加入以下两行代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(twoD.Length);</span><br><span class="line">Console.WriteLine(array3D.Length);</span><br></pre></td></tr></table></figure>
+<p>输出的结果并不会是：</p>
+<blockquote>
+<p>3</p>
+<p>2</p>
+</blockquote>
+<p>正确的输出结果是：</p>
+<blockquote>
+<p>9</p>
+<p>12</p>
+</blockquote>
+<p>和其他的语言不一样的是，数组的<code>length</code>最后传回来的是数组中所有元素的和，而非单一行的长度。</p>
 
       
     </div>
@@ -650,7 +660,7 @@
   <li class="post-copyright-link">
     <strong>Post link: </strong>
     
-    <a href="https://goldenaarcher.com/2019/07/14/使用七牛云COS作为图床/" title="使用七牛云COS作为图床">https://goldenaarcher.com/2019/07/14/使用七牛云COS作为图床/</a>
+    <a href="https://goldenaarcher.com/2019/07/15/C-4-数组/" title="C#4 - 数组">https://goldenaarcher.com/2019/07/15/C-4-数组/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
@@ -666,9 +676,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/C/" rel="tag"># C#</a>
           
-            <a href="/tags/七牛云/" rel="tag"># 七牛云</a>
+            <a href="/tags/Net/" rel="tag"># .Net</a>
           
         </div>
       
@@ -681,8 +691,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/14/C-3-流程控制/" rel="next" title="C#3 - 流程控制">
-                <i class="fa fa-chevron-left"></i> C#3 - 流程控制
+              <a href="/2019/07/14/使用七牛云COS作为图床/" rel="next" title="使用七牛云COS作为图床">
+                <i class="fa fa-chevron-left"></i> 使用七牛云COS作为图床
               </a>
             
           </div>
@@ -690,10 +700,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/15/C-4-数组/" rel="prev" title="C#4 - 数组">
-                C#4 - 数组 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -977,7 +983,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最初的选择"><span class="nav-number">1.</span> <span class="nav-text">最初的选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注册和配置七牛云"><span class="nav-number">2.</span> <span class="nav-text">注册和配置七牛云</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地安装"><span class="nav-number">3.</span> <span class="nav-text">本地安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是数组"><span class="nav-number">1.</span> <span class="nav-text">什么是数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#案例：数组中数据的存入和获取"><span class="nav-number">2.</span> <span class="nav-text">案例：数组中数据的存入和获取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Foreach循环"><span class="nav-number">3.</span> <span class="nav-text">Foreach循环</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多维数组"><span class="nav-number">4.</span> <span class="nav-text">多维数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后关于length"><span class="nav-number">5.</span> <span class="nav-text">最后关于length</span></a></li></ol></div>
             
 
           </div>
