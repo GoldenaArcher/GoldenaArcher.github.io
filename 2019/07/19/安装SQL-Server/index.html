@@ -126,7 +126,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/SqlServer/installOfSqlServer2017.jpg">
 <meta property="og:image" content="http://qiniu.goldenaarcher.com/images//c%23/SqlServer/InstallOfSSMS.jpg">
-<meta property="og:updated_time" content="2019-07-18T16:18:48.084Z">
+<meta property="og:updated_time" content="2019-07-19T13:27:42.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装SQL Server">
 <meta name="twitter:description" content="安装SQL Server以及踩过的坑">
@@ -472,9 +472,13 @@
                 
               
 
-              <time title="Created: 2019-07-19 00:18:48" itemprop="dateCreated datePublished" datetime="2019-07-19T00:18:48+08:00">2019-07-19</time>
+              <time title="Created: 2019-07-19 00:18:48 / Modified: 21:27:42" itemprop="dateCreated datePublished" datetime="2019-07-19T00:18:48+08:00">2019-07-19</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -593,33 +597,28 @@
 <h1 id="可能出现的报错信息"><a href="#可能出现的报错信息" class="headerlink" title="可能出现的报错信息"></a>可能出现的报错信息</h1><p>之前在公司的电脑上，因为有权限的问题，所以在SQL Server和SSMS安装好之后，使用<code>Windows Authentication</code>时，根本就没有办法在SSMS里创建新的数据库。</p>
 <p>报错信息就是——<code>CREATE DATABASE permission denied in database &#39;master&#39;</code>。</p>
 <p>来自<a href="https://stackoverflow.com/users/3935635/chris" target="_blank" rel="noopener">Chris</a>的方法最终解决了这个问题，具体解决方案如下：</p>
-<blockquote>
 <ol>
 <li><p>搜索<code>Services</code>，随后在<code>Services</code>中关闭<code>SQL Server</code>。这一步非常重要，如果<code>SQL Server</code>没关闭的话，后面的操作<del>可能</del>会失败。<del>反正我第一次不信邪就失败了……</del></p>
 </li>
 <li><p>以管理员权限运行<code>cmd</code>，用<code>cd</code>去更改到<code>SQL Server</code>安装的目录下的<code>/MSSQL14.SQLEXPRESS/MSSQL/Binn</code>中。具体如下：</p>
-</li>
-</ol>
 <blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="comment">#文件目录以chris的作为参考</span></span><br><span class="line">&gt;&gt; $ <span class="built_in">cd</span> C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\Binn</span><br><span class="line">&gt;&gt; <span class="comment"># 我用 sqlservr.exe 去运行的话会报错，但是直接调用 sqlservr 就没有问题</span></span><br><span class="line">&gt;&gt; $ sqlservr -m -s SQLEXPRESS</span><br><span class="line">&gt;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#文件目录以chris的作为参考</span></span><br><span class="line">$ <span class="built_in">cd</span> C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\Binn</span><br><span class="line"><span class="comment"># 我用 sqlservr.exe 去运行的话会报错，但是直接调用 sqlservr 就没有问题</span></span><br><span class="line">$ sqlservr -m -s SQLEXPRESS</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>在<code>sqlservr</code>启动了之后会出现很多的命令行，没有看到报错信息就ok了</p>
-<ol>
+</li>
 <li><p>以管理员的身份打开一个新的<code>cmd</code></p>
 </li>
 <li><p>打开<code>sqlcmd</code>，如下：</p>
-</li>
-</ol>
 <blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; $ sqlcmd -S .\SQLEXPRESS</span><br><span class="line">&gt;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sqlcmd -S .\SQLEXPRESS</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<ol>
-<li>将自己的用户加入管理组，即<code>sysadmin</code>中，如下：<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; $ sp_addsrvrolemember <span class="string">'domain\user'</span>, <span class="string">'sysadmin'</span></span><br><span class="line">&gt;&gt; $ GO</span><br><span class="line">&gt;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将自己的用户加入管理组，即<code>sysadmin</code>中，如下：</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sp_addsrvrolemember <span class="string">'domain\user'</span>, <span class="string">'sysadmin'</span></span><br><span class="line">$ GO</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ol>
-</blockquote>
 <p>这个之后在<code>Services</code>中启动<code>SQL Server</code>，以当前用户身份使用打开SSMS，并选择使用<code>Windows Authentication</code>进行验证后，就可以直接创建新的数据库，而不会返回<code>CREATE DATABASE permission denied in database &#39;master&#39;</code>报错信息了。</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://stackoverflow.com/questions/11231934/create-database-permission-denied-in-database-master-ef-code-first" target="_blank" rel="noopener">CREATE DATABASE permission denied in database ‘master’ (EF code-first)</a></p>
 
