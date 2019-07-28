@@ -124,12 +124,12 @@
 <meta property="og:site_name" content="GoldenaArcher&#39;s Note">
 <meta property="og:description" content="个人来说，if/else用的比较少，条件运算符和循环倒是经常用">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://qiniu.goldenaarcher.com/images//images/react/comp/table.jpg">
-<meta property="og:updated_time" content="2019-07-27T17:13:44.759Z">
+<meta property="og:image" content="http://qiniu.goldenaarcher.com/images//react/comp/table.jpg">
+<meta property="og:updated_time" content="2019-07-28T08:59:36.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReactJS4 - if语句及循环">
 <meta name="twitter:description" content="个人来说，if/else用的比较少，条件运算符和循环倒是经常用">
-<meta name="twitter:image" content="http://qiniu.goldenaarcher.com/images//images/react/comp/table.jpg">
+<meta name="twitter:image" content="http://qiniu.goldenaarcher.com/images//react/comp/table.jpg">
 
 
 
@@ -471,9 +471,13 @@
                 
               
 
-              <time title="Created: 2019-07-28 01:13:44" itemprop="dateCreated datePublished" datetime="2019-07-28T01:13:44+08:00">2019-07-28</time>
+              <time title="Created: 2019-07-28 01:13:44 / Modified: 16:59:36" itemprop="dateCreated datePublished" datetime="2019-07-28T01:13:44+08:00">2019-07-28</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -590,7 +594,7 @@
 <h1 id="使用map代替循环"><a href="#使用map代替循环" class="headerlink" title="使用map代替循环"></a>使用map代替循环</h1><p><code>map</code>还是蛮常用的，找别的代码现在基本上都不太使用循环而是直接用map了。如果不需要index的话，<code>map</code>挺适合处理数据的。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        <span class="keyword">var</span> books = [</span><br><span class="line">            &#123;图书id: <span class="number">1</span>, 书名: <span class="string">'飞狐外传'</span>, 分类: <span class="string">'武侠'</span>&#125;,</span><br><span class="line">            &#123;图书id: <span class="number">2</span>, 书名: <span class="string">'雪山飞狐'</span>, 分类: <span class="string">'武侠'</span>&#125;,</span><br><span class="line">            &#123;图书id: <span class="number">3</span>, 书名: <span class="string">'连城诀'</span>, 分类: <span class="string">'武侠'</span>&#125;,</span><br><span class="line">        ];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>(</span><br><span class="line">            &lt;React.Fragment&gt;</span><br><span class="line">                &lt;table className=<span class="string">"图书列表"</span>&gt;</span><br><span class="line">                    &lt;caption&gt;图书列表&lt;<span class="regexp">/caption&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;thead&gt;</span></span><br><span class="line"><span class="regexp">                        &lt;tr&gt;</span></span><br><span class="line"><span class="regexp">                            &lt;td&gt;图书id&lt;/</span>td&gt;</span><br><span class="line">                            &lt;td&gt;图书名称&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">                            &lt;td&gt;图书分类&lt;/</span>td&gt;</span><br><span class="line">                        &lt;<span class="regexp">/tr&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;/</span>thead&gt;</span><br><span class="line">                    &lt;tbody&gt;</span><br><span class="line">                        &#123;books.map(<span class="function"><span class="params">book</span>=&gt;</span>&#123;</span><br><span class="line">                            <span class="keyword">return</span> (</span><br><span class="line">                                &lt;tr&gt;</span><br><span class="line">                                    &lt;td&gt;&#123;book.图书id&#125;&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">                                    &lt;td&gt;&#123;book.书名&#125;&lt;/</span>td&gt;</span><br><span class="line">                                    &lt;td&gt;&#123;book.分类&#125;&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">                                &lt;/</span>tr&gt;</span><br><span class="line">                            )</span><br><span class="line">                        &#125;)&#125;</span><br><span class="line">                    &lt;<span class="regexp">/tbody&gt;</span></span><br><span class="line"><span class="regexp">                &lt;/</span>table&gt;</span><br><span class="line">            &lt;<span class="regexp">/React.Fragment&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default Demo;</span></span><br></pre></td></tr></table></figure>
 <p>输入出下：</p>
-<img src="http://qiniu.goldenaarcher.com/images//images/react/comp/table.jpg">
+<img src="http://qiniu.goldenaarcher.com/images//react/comp/table.jpg">
 <p>有一点需要注意的就是，在使用<code>map</code>的时候，虽然会正常渲染，但是打开<code>console</code>的话会有如下报错信息：</p>
 <blockquote>
 <p>Each child in a list should have a unique “key” prop.</p>
