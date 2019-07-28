@@ -124,7 +124,7 @@
 <meta property="og:site_name" content="GoldenaArcher&#39;s Note">
 <meta property="og:description" content="感觉什么都没做但是Hexo就报Template render error了……随后开始疯狂找原因……">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-29T11:32:54.380Z">
+<meta property="og:updated_time" content="2019-07-28T08:47:04.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次hexo报错——tag name expected">
 <meta name="twitter:description" content="感觉什么都没做但是Hexo就报Template render error了……随后开始疯狂找原因……">
@@ -473,6 +473,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-28 16:47:04" itemprop="dateModified" datetime="2019-07-28T16:47:04+08:00">2019-07-28</time>
+              
+            
           </span>
 
           
@@ -536,7 +552,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">1k</span>
+                <span title="Symbols count in article">1.1k</span>
               
 
               
@@ -585,12 +601,9 @@
 <hr>
 <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>就……把<code>qnimg</code>的指令加上去就好了。</p>
 <p>不过对于其他需要{{ }}或者{% %}的指令，可以用以下两种方案解决：</p>
-<blockquote>
-<p><code>{%和%}</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; ​```&#123;&#123; &#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>```</p>
-</blockquote>
-<p>包裹起来就好了，显示的只要是源代码就好了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;&#123;%和%&#125;&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+<p>或者用&#0096;&#0096;&#0096;包裹住代码块。</p>
+<p>只要做到让其显示的只要是源代码就好了，那么hexo就不会对其进行编译了。</p>
 <hr>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.klause.cn/2019/04/15/%E9%83%A8%E7%BD%B2/Hexo%20+%20Github%20%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">Hexo + Github 部署博客踩坑</a></p>
 <p><a href="https://lovenight.github.io/2016/09/27/Hexo%E6%8A%A5%E9%94%99Template-render-error-tag-name-expected/" target="_blank" rel="noopener">Hexo报错Template render error: tag name expected</a></p>
@@ -757,7 +770,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1015,7 +1028,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">97k</span>
+    <span title="Symbols count total">101k</span>
   
 
   
@@ -1024,7 +1037,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">1:28</span>
+    <span title="Reading time total">1:32</span>
   
 </div>
 
