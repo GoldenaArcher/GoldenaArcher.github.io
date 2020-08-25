@@ -468,7 +468,7 @@
                 
               
 
-              <time title="Created: 2020-08-25 04:26:40 / Modified: 04:51:07" itemprop="dateCreated datePublished" datetime="2020-08-25T04:26:40-05:00">2020-08-25</time>
+              <time title="Created: 2020-08-25 04:26:40 / Modified: 05:00:43" itemprop="dateCreated datePublished" datetime="2020-08-25T04:26:40-05:00">2020-08-25</time>
             
 
             
@@ -532,7 +532,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">359</span>
+                <span title="Symbols count in article">532</span>
               
 
               
@@ -567,15 +567,16 @@
 
       
         
+          <p>在下载了最新版本的android studio，并且下载好了sdk tools之后，在cmd中输出<code>adb</code>无果，其主要原因还是因为android sdk并没有配置成功。</p>
+          <!--noindex-->
           
-            <p>在下载了最新版本的android studio，并且下载好了sdk tools之后，在cmd中输出<code>adb</code>无果，其主要原因还是因为android sdk并没有配置成功。</p>
-<p>根据<a href="https://docs.expo.io/workflow/android-studio-emulator/" target="_blank" rel="noopener">expo的官方文档</a>配置并没有成功。</p>
-<p>经过一番摸索后发现，正确的做法是跟着expo的官方文档一直到获取<code>Android SDK Location</code>，并将sdk的地址重命名为<code>ANDROID_HOME</code>保存在系统变量之中。随后再在<code>Path</code>之中加入以下三个变量地址：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">;%ANDROID_HOME%\tools</span><br><span class="line">;%ANDROID_HOME%\tools\bin</span><br><span class="line">;%ANDROID_HOME%\platform-tools</span><br></pre></td></tr></table></figure>
-<p>将正确的<code>exe</code>文件保存在路径之中。</p>
-<p>这个时候在cmd中输入<code>adb</code>时，就能够成功的获取<code>Android Debug Bridge</code>的安装地址。</p>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/08/25/配置android-sdk和模拟器/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
