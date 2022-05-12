@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>React电面复盘 | GoldenaArcher的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一次的内部 rotation 的面试，时间大概也在半个小时左右。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React电面复盘">
+<meta property="og:url" content="https://username.github.io/2021/02/24/react-interview/index.html">
+<meta property="og:site_name" content="GoldenaArcher的博客">
+<meta property="og:description" content="一次的内部 rotation 的面试，时间大概也在半个小时左右。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-02-25T04:35:41.000Z">
+<meta property="article:modified_time" content="2022-05-09T05:13:50.020Z">
+<meta property="article:author" content="GoldenaArcher">
+<meta property="article:tag" content="React">
+<meta property="article:tag" content="面试">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="GoldenaArcher的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">GoldenaArcher的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://username.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-react-interview" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/24/react-interview/" class="article-date">
+  <time class="dt-published" datetime="2021-02-25T04:35:41.000Z" itemprop="datePublished">2021-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      React电面复盘
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>一次的内部 rotation 的面试，时间大概也在半个小时左右。</p>
+<span id="more"></span>
+
+<h1 id="React-相关"><a href="#React-相关" class="headerlink" title="React 相关"></a>React 相关</h1><p>过去一年多都在用 React 写项目，所以这一块是回答的比较舒服和比较流畅的地方，感觉面试官也是比较满意的样子。</p>
+<p>问题列表如下：</p>
+<ul>
+<li><p>虚拟 DOM 了解吗<br>传统的 MVC 项目经常直接更新 DOM tree，因此渲染的性能较为低下。Virtual DOM 是 React 的一个特性，它可以算是一个真实的 DOM tree 的拷贝。但是当 React 的状态发生改变了之后，它不会第一时间去更新 DOM Tree，而是会先在 Virtual DOM 里面对产生状态的节点进行判断，如果节点真的改变了，React 才在页面上进行更新。因此使用了 Virtual DOM 提升了页面的渲染效率。</p>
+</li>
+<li><p>React 用的什么版本<br>16.8 以上，不过项目之中并没有用<code>React Hooks</code>。</p>
+</li>
+<li><p>JSX<br>React 的语法糖，JSX 最终还是要编译成 JavaScript 文件的，但是对于开发者来说 JSX 的结构更加清晰明确，写出来的代码可读性更高。</p>
+</li>
+<li><p>生命周期<br>这里面试官抓了一个<code>componentDidMount</code>问。当时的答复说是这是处在 mounting 的时候调用的函数，在之前的项目中经常会在<code>componentDidMount</code>检查调用 api。</p>
+<blockquote>
+<p>确实应该好好的复习一下生命周期的函数，得印在脑子里才行。</p>
+</blockquote>
+</li>
+<li><p>React 程序跑的很慢怎么办<br>可以从这么几个方面解决：</p>
+<ol>
+<li>检查一下所引用的包在地区内是否可以访问，<del>例如国内无法访问谷歌组件</del>，如果不可以访问的话需要更换 CDN 或者打包到自己的项目之内。</li>
+<li>可以看一下 WebPack 是怎么打包代码 bundles 的，有可能有些 Bundles 特别大，这就导致了页面加载速度过慢。</li>
+<li>可以通过设立子域名，知道目录的话可以加速读取。<blockquote>
+<p>面试完了之后才想起来，除了上面提到的两点，其实还有其他的方法：</p>
+<ul>
+<li>UI 的优化：在拉取数据的时候进行部分组件的渲染，增加加载 UI 的优化，这样在用户体验感上就不会觉得页面加载时间太久。</li>
+<li>数据的半持久化：对于非敏感和非频繁更新信息可以持久在 SessionStorage 或者 LocalStorage 之中，这样可以减少数据的交互，提升加载速度。</li>
+<li>其他方面，关于非 React 的优化其实都可以放在 React 里面去做，例如说优化图片，设置图片的高度和宽度之类的。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>知道<code>React Route</code>r 吗<br><code>React Router</code>为 React 项目提供了路由，因为 React 是一个 SPA（Single Page Application），没有路由的话，普通的访问浏览就无法方便的实现。</p>
+</li>
+<li><p>知道<code>React Contex</code>t 吗<br><code>React Context</code>是 React 提供的一个组件，用于父组件与子组件的数据传输。<br>的确通过<code>props</code>可以将数据从父组件传到子组件之中，但是如果组件与组件的结构层数比较远，那么一遍遍传输<code>props</code>是一个效率比较低下并且容易出错的方法。React 提供了<code>Context</code>组件，其中有<code>Provider</code>和<code>Consumer</code>，父组件可以将数据放入<code>Provider</code>之中，子组件可以通过<code>Consumer</code>去获取数据。<br>不过项目之中用<code>Redux</code>比较多，毕竟<code>Redux</code>也可以平级获取信息。</p>
+</li>
+<li><p>React 页面经常更新怎么办</p>
+<ul>
+<li>可以在<code>ComponentDidMount()</code>之中确认数据是否已经被获取，然后再决定是否要调用<code>setState()</code>函数去更新状态。</li>
+<li>同样也可以使用<code>shouldComponentUpdate()</code>里面确认<code>nextProps</code>和<code>nextState</code>和现在的是否相同，然后返回 true 去确认更新，false 取消更新。不过<code>shouldComponentUpdate()</code>并不是百分百可靠的，有的时候就是会执行强制更新。<blockquote>
+<p>我还说了可以使用<code>pureComponent</code>，不过面试官好像没有听到。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><code>StrictMode</code>知道吗<br>把<code>StrictMode</code>和<code>use strict</code>弄混了，按照<code>use strict</code>去解释的，不过<code>use strict</code>更多的检查代码的作用域、规范性之类的，React 的<code>StrictMode</code>管理的是 React 自己的“违规操作”。<a target="_blank" rel="noopener" href="https://reactjs.org/docs/strict-mode.html">官方文档 v17.0.1</a>上目前标注的几点如下： &gt; - Identifying components with unsafe lifecycles &gt; 即，在异步的项目中，部分 legacy lifecycle methods 的使用并不安全，而开发人员也并不清楚检查第三方库里面是否使用了 legacy lifecycle methods，<code>StrictMode</code>在编译时会生成一列使用 legacy lifecycle methods 的类组件，并抛出警告。 &gt; - Warning about legacy string ref API usage &gt; 这个也和 legacy code 有关，string ref 已经是 legacy code 了，<code>StrictMode</code>会检查 string ref 的使用，并抛出警告，但是目前 React 仍然会继续支持 string ref。 &gt; - Warning about deprecated findDOMNode usage &gt; 当项目内部使用了<code>findDOMNode </code>时抛出警告。 &gt; - Detecting unexpected side effects &gt; 通过二次重复调用生命周期函数去检测当生命周期函数被频繁调用时造成的影响，只在开发环境中使用，生产环境并不会二次调用。 &gt; - Detecting legacy context API &gt; 如题所说，检测 legacy context API 的使用。</p>
+</li>
+</ul>
+<h1 id="其他-Package-或者-Tech-Stack"><a href="#其他-Package-或者-Tech-Stack" class="headerlink" title="其他 Package 或者 Tech Stack"></a>其他 Package 或者 Tech Stack</h1><h2 id="WebPack"><a href="#WebPack" class="headerlink" title="WebPack"></a>WebPack</h2><ul>
+<li>css processor<br>我倒是知道这是一个 WebPack 的配置，但是具体的没有答出来，只是说了对 WebPack 不是很了解。</li>
+</ul>
+<h2 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS"></a>NodeJS</h2><p>面试官问了，但是对 NodeJS 并不是非常了解……</p>
+<h2 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h2><p>编译器，将 JSX 转化成浏览器可以读取的 JavaScript。</p>
+<h2 id="移动开发"><a href="#移动开发" class="headerlink" title="移动开发"></a>移动开发</h2><p>有看过 React Native 的一些文档，不过没有实际的开发经验。</p>
+<h1 id="常识性知识"><a href="#常识性知识" class="headerlink" title="常识性知识"></a>常识性知识</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ul>
+<li>什么是 meta tag<br><code>meta tag</code>是 HTML 的一个标签，可以展示页面的一些关键数据，例如说作者，内容提要等，可以用于提升 SEO。</li>
+<li>什么是 html creation<br>和面试官的沟通非常重要，我没有搞清楚<strong>html creation</strong>的定义是什么，所以我问了面试官他对<strong>html creation</strong>。面试官想问的就是 HTML 之间不同的 tag 的区别，他扣细节举例问了<code>div</code>和<code>span</code>的区别。<br><code>div</code>是一个 division，将内容划分为一个个的小模块，<code>span</code>主要作用于 text，而<code>div</code>可以用于分开超链接、图片等。</li>
+</ul>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
+<li>什么是<code>psudo-class</code><br><code>psudo-class</code>无法独立存在，例如说<code>:hover</code>, <code>:visited</code>，必须挂靠在某个 CSS class 之中。<br><code>psudo-class</code>可以极大的提升用户体验，例如说现在大部分的网页，在鼠标落在超链接上，鼠标光标都会变成<code>pointer</code>，这样可以提示用户该超链接可以点击。</li>
+<li>了解 floating 吗<br>知道。用自己的语言难以表述，因此用了 Word 文档之中的图片举例。Word 文档之中图片插入的时候，必须要选择图片怎么样和文字进行排序。<code>floating</code>起到了同样的功能。<br>耍了一个小聪明，不过面试官接受了这个解释。</li>
+<li>知道 media query 吗<br>Media Query 使得页面布局响应式，Media Query 可以选择不同的屏幕宽度，从而根据页面的宽度对页面进行适配。</li>
+</ul>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><ul>
+<li><code>map</code>函数<br>一个 JavaScript 的循环，不过<code>map</code>在循环体内会返回一个值。</li>
+</ul>
+<h2 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h2><p>刚开始已经说了对 JQuery 不是很了解，因为之前的项目都是从 0 开始搭建的 React 项目，所以都在用 React 的语法糖去写。不过后面还是问了一个问题。</p>
+<ul>
+<li>jquery(“#abc”) 是什么意思<br>在 DOM 节点中选择一个 id 是<code>abc</code>的节点。 &gt; 之前把期待值设得很低之后，对于我回答出了这个问题，面试官还蛮惊讶的。 &gt; 不过设低期待值还是挺危险的……</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>localStorage<br>可以持久化一些不是非常敏感，并且不是经常更新的数据。可以通过<code>localStorage.setItem()</code>获取 localStorage 里面的数据，通过<code>localStorage.getItem()</code>去获取数据。</li>
+<li>cookies 和 localStorage 的区别<br>cookies 可以允许同源域名访问，localStorage 则是所有的页面都可以访问;<br>cookies 保存的数据比较小，localStorage 保存的数据比较大。 &gt; 这个回答真的比较干了，也没有完整的描述 cookies 和 localStorage 的区别……</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>在过去的一年里面还是在舒适圈里面呆的太久了，对 React 比较熟悉之后渐渐的就习惯了搬砖的工作，没有继续对上下游，如 NodeJS, MongoDB, ExpressJS, WebPack，等进行更加深入的挖掘和学习；对于 HTML、CSS 和 JavaScript 虽然也有在陆陆续续的学习，但是学得很散，没有能够串联起来。</p>
+<p>另外好记性不如烂笔头，结束了一个阶段的学习之后进行总结也是非常重要的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://username.github.io/2021/02/24/react-interview/" data-id="cl2y9m0zh000450we8ty86e30" data-title="React电面复盘" class="article-share-link">Teilen</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/01/the-star-zoo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          星际动物园读后感
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/02/24/react-create-component-recursively/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">React递归生成组件</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B6%E4%BB%96/" rel="tag">其他</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 15px;">其他</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 10px;">读书</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 15px;">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/08/react-interview-mar-21/">2021.03.08 协助React面试有感</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/05/chinese-typography/">写给大家看的中文排版指南</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/02/tamato-clock/">番茄工作法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/01/the-star-zoo/">星际动物园读后感</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/24/react-interview/">React电面复盘</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 GoldenaArcher<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
